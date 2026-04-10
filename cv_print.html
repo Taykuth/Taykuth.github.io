@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bora Taykut HINDAL - AI Engineer CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --text-color: #2d3748;
+            --text-light: #4a5568;
+            --text-lighter: #718096;
+            --border-color: #e2e8f0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .page {
+            background: white;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+
+        /* Print Settings */
+        @media print {
+            body {
+                background: none;
+                margin: 0;
+                padding: 0;
+                display: block;
+            }
+            .page {
+                box-shadow: none;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            @page {
+                size: A4;
+                margin: 15mm;
+            }
+        }
+
+        /* HEADER */
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 28pt;
+            font-weight: 700;
+            margin: 0 0 5px 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .title {
+            color: var(--text-light);
+            font-size: 14pt;
+            font-weight: 500;
+            margin: 0 0 12px 0;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 10pt;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .contact-info i {
+            color: var(--primary-color);
+        }
+
+        .contact-info a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* SECTION HEADERS */
+        h2 {
+            color: var(--primary-color);
+            font-size: 13.5pt;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 4px;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        /* CONTENT STYLES */
+        p.summary {
+            font-size: 10.5pt;
+            line-height: 1.5;
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+
+        .section-item {
+            margin-bottom: 15px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .item-title {
+            font-weight: 700;
+            font-size: 11pt;
+            color: var(--text-color);
+        }
+
+        .item-subtitle {
+            font-weight: 600;
+            font-size: 10.5pt;
+            color: var(--primary-color);
+        }
+
+        .item-date {
+            font-weight: 500;
+            font-size: 10pt;
+            color: var(--text-lighter);
+        }
+
+        ul.achievements {
+            margin: 4px 0 0 0;
+            padding-left: 18px;
+            font-size: 10pt;
+            line-height: 1.5;
+        }
+
+        ul.achievements li {
+            margin-bottom: 3px;
+        }
+
+        /* SKILLS STYLES */
+        .skills-container {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .skill-row {
+            font-size: 10pt;
+            line-height: 1.5;
+        }
+
+        .skill-category {
+            font-weight: 700;
+            min-width: 150px;
+            display: inline-block;
+            color: var(--primary-color);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- HEADER -->
+        <header style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <div>
+                <h1>Bora Taykut HINDAL</h1>
+                <div class="title">Artificial Intelligence Engineer</div>
+                <div class="contact-info">
+                    <div><i class="fas fa-phone"></i> +90 533 148 62 13</div>
+                    <div><i class="fas fa-envelope"></i> <a href="mailto:btaykuthindal@gmail.com">btaykuthindal@gmail.com</a></div>
+                    <div><i class="fab fa-github"></i> <a href="https://github.com/Taykuth">github.com/Taykuth</a></div>
+                    <div><i class="fab fa-linkedin"></i> <a href="#">linkedin.com/in/btaykuthindal</a></div>
+                    <div><i class="fas fa-map-marker-alt"></i> Kocaeli, Turkey</div>
+                </div>
+            </div>
+            <img src="profile.jpg" alt="Bora Taykut HINDAL" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-top: 5px;">
+        </header>
+
+        <!-- SUMMARY -->
+        <p class="summary">
+            Dedicated Artificial Intelligence Engineer with a proven track record of engineering scalable machine learning models, deploying robust Large Language Models (LLMs), and crafting advanced automation solutions. Deeply passionate about leveraging Generative AI, natural language processing, and computer vision to solve complex real-world problems. Experienced in transforming abstract data into actionable intelligence, I thrive in environments that challenge the frontiers of technology and require innovative algorithms to drive both business efficiency and product excellence.
+        </p>
+
+        <!-- SKILLS -->
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-row">
+                <span class="skill-category">Programming Languages:</span> 
+                Python, TypeScript, JavaScript, SQL, HTML/CSS
+            </div>
+            <div class="skill-row">
+                <span class="skill-category">Core AI & Machine Learning:</span> 
+                Deep Learning, LLMs, RAG Systems, Generative AI, Computer Vision, Equivariant GNNs
+            </div>
+            <div class="skill-row">
+                <span class="skill-category">Frameworks & Libraries:</span> 
+                PyTorch, TensorFlow, OpenCV, LangChain, Hugging Face
+            </div>
+            <div class="skill-row">
+                <span class="skill-category">Tools & MLOps:</span> 
+                Git/GitHub, Docker, Model Deployment Pipelines, Jupyter, REST APIs
+            </div>
+        </div>
+
+        <!-- PROFESSIONAL EXPERIENCE -->
+        <h2>Professional Experience</h2>
+        
+        <div class="section-item">
+            <div class="item-header">
+                <div>
+                    <span class="item-title">Freelance AI Consultant & Developer</span>
+                    <span class="item-subtitle"> | Independent</span>
+                </div>
+                <div class="item-date">2023 - Present</div>
+            </div>
+            <ul class="achievements">
+                <li>Architected and delivered custom Chatbots and SaaS automation solutions tailored for various enterprise clients and businesses.</li>
+                <li>Automated repetitive marketing and business workflows using advanced LLM implementations, significantly reducing operational overhead.</li>
+                <li>Conducted end-to-end technical consulting to identify AI use-cases and integrated reliable machine learning tools into existing architectures.</li>
+            </ul>
+        </div>
+
+        <div class="section-item">
+            <div class="item-header">
+                <div>
+                    <span class="item-title">AI Prompt & Product Engineer</span>
+                    <span class="item-subtitle"> | Skywalker</span>
+                </div>
+                <div class="item-date">2022 - 2023</div>
+            </div>
+            <ul class="achievements">
+                <li>Spearheaded the integration of AI tools for generating highly engaging, SEO-optimized product descriptions, boosting organic web traffic.</li>
+                <li>Designed and executed automated workflows leveraging Generative AI for high-quality, large-scale product image creation.</li>
+                <li>Collaborated with e-commerce teams to align generated outputs with brand aesthetics and market demands.</li>
+            </ul>
+        </div>
+
+        <!-- EDUCATION -->
+        <h2>Education</h2>
+        <div class="section-item">
+            <div class="item-header">
+                <div>
+                    <span class="item-title">Ostim Technical University</span>
+                    <span class="item-subtitle"> | Bachelor's Degree</span>
+                </div>
+                <div class="item-date">Ankara, Turkey</div>
+            </div>
+            <ul class="achievements">
+                <li><strong>Major:</strong> Artificial Intelligence Engineering</li>
+                <li>Focused heavily on foundational neural network structures, algorithmic optimization, and real-world AI applications.</li>
+            </ul>
+        </div>
+
+        <!-- NOTABLE PROJECTS -->
+        <h2>Notable Projects</h2>
+        
+        <div class="section-item">
+            <div class="item-header">
+                <span class="item-title">EGNN Protein-Ligand Predictor</span>
+            </div>
+            <ul class="achievements">
+                <li>Engineered an Equivariant Graph Neural Network (EGNN) using PyTorch designed to predict protein-ligand binding affinities.</li>
+                <li>Implemented efficient data processing pipelines to combine ligand and protein pocket information into deep molecular joint graphs.</li>
+            </ul>
+        </div>
+
+        <div class="section-item">
+            <div class="item-header">
+                <span class="item-title">NeoBioAI</span>
+            </div>
+            <ul class="achievements">
+                <li>Developed a foundational bioinformatics Artificial Intelligence pipeline focusing on advanced biological data processing and robust genomic analysis.</li>
+            </ul>
+        </div>
+
+        <div class="section-item">
+            <div class="item-header">
+                <span class="item-title">AI Job Agent</span>
+            </div>
+            <ul class="achievements">
+                <li>Built a fully automated, AI-powered system using TypeScript and LLMs designed to streamline and manage the job application process end-to-end.</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
