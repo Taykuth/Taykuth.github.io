@@ -1,0 +1,139 @@
+{
+  "generated_at": "2026-09-23T09:57:28.620Z",
+  "disclaimer": "Metrikler sentetik telemetri üzerinde zaman bazlı test ayrımıyla hesaplanmıştır; gerçek fabrika performansı değildir.",
+  "model": {
+    "anomaly_detector": "Referans normal dağılıma göre çok değişkenli z-score",
+    "risk_model": "Ağırlıklı lojistik regresyon (gradient descent)",
+    "features": [
+      "temperature_c",
+      "vibration_mm_s",
+      "motor_current_a",
+      "hydraulic_pressure_bar",
+      "coolant_flow_l_min",
+      "production_rate_units_h"
+    ],
+    "feature_importance": [
+      {
+        "feature": "hydraulic_pressure_bar",
+        "coefficient": -0.4141,
+        "importance": 0.4141
+      },
+      {
+        "feature": "vibration_mm_s",
+        "coefficient": 0.3901,
+        "importance": 0.3901
+      },
+      {
+        "feature": "temperature_c",
+        "coefficient": 0.3163,
+        "importance": 0.3163
+      },
+      {
+        "feature": "coolant_flow_l_min",
+        "coefficient": -0.2545,
+        "importance": 0.2545
+      },
+      {
+        "feature": "motor_current_a",
+        "coefficient": -0.0218,
+        "importance": 0.0218
+      },
+      {
+        "feature": "production_rate_units_h",
+        "coefficient": -0.0155,
+        "importance": 0.0155
+      }
+    ]
+  },
+  "offline_evaluation": {
+    "test_rows": 1152,
+    "positive_rate": 0.413,
+    "precision": 0.658,
+    "recall": 0.529,
+    "f1": 0.587,
+    "false_alarm_rate": 0.194,
+    "confusion_matrix": {
+      "true_positive": 252,
+      "false_positive": 131,
+      "false_negative": 224,
+      "true_negative": 545
+    }
+  },
+  "latest_snapshot": {
+    "timestamp": "2026-09-06T23:45:00.000Z",
+    "machines": [
+      {
+        "machine_id": "CNC-12",
+        "machine_name": "CNC İşleme 12",
+        "process": "Talaşlı imalat",
+        "risk_percent": 49,
+        "anomaly_percent": 23,
+        "estimated_downtime_hours": 1.8,
+        "recommended_action": "Planlı saha kontrolü oluştur"
+      },
+      {
+        "machine_id": "ROB-03",
+        "machine_name": "Kaynak Robotu 03",
+        "process": "Otomotiv hattı",
+        "risk_percent": 44,
+        "anomaly_percent": 58,
+        "estimated_downtime_hours": 1.8,
+        "recommended_action": "Planlı saha kontrolü oluştur"
+      },
+      {
+        "machine_id": "PRES-04",
+        "machine_name": "Pres Makinesi 04",
+        "process": "Metal şekillendirme",
+        "risk_percent": 44,
+        "anomaly_percent": 42,
+        "estimated_downtime_hours": 1.8,
+        "recommended_action": "Planlı saha kontrolü oluştur"
+      },
+      {
+        "machine_id": "CNC-03",
+        "machine_name": "CNC İşleme 03",
+        "process": "Talaşlı imalat",
+        "risk_percent": 42,
+        "anomaly_percent": 18,
+        "estimated_downtime_hours": 1.8,
+        "recommended_action": "Planlı saha kontrolü oluştur"
+      },
+      {
+        "machine_id": "ROB-08",
+        "machine_name": "Kaynak Robotu 08",
+        "process": "Otomotiv hattı",
+        "risk_percent": 40,
+        "anomaly_percent": 79,
+        "estimated_downtime_hours": 1.8,
+        "recommended_action": "Planlı saha kontrolü oluştur"
+      },
+      {
+        "machine_id": "INJ-11",
+        "machine_name": "Enjeksiyon Presi 11",
+        "process": "Plastik parça",
+        "risk_percent": 40,
+        "anomaly_percent": 5,
+        "estimated_downtime_hours": 1.8,
+        "recommended_action": "Planlı saha kontrolü oluştur"
+      },
+      {
+        "machine_id": "INJ-07",
+        "machine_name": "Enjeksiyon Presi 07",
+        "process": "Plastik parça",
+        "risk_percent": 28,
+        "anomaly_percent": 40,
+        "estimated_downtime_hours": 0.4,
+        "recommended_action": "Normal izlemeye devam et"
+      },
+      {
+        "machine_id": "PRES-09",
+        "machine_name": "Pres Makinesi 09",
+        "process": "Metal şekillendirme",
+        "risk_percent": 26,
+        "anomaly_percent": 44,
+        "estimated_downtime_hours": 0.4,
+        "recommended_action": "Normal izlemeye devam et"
+      }
+    ]
+  }
+}
