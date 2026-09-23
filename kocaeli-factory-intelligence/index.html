@@ -118,10 +118,10 @@
       .bar.teal b { background: #75cdb0; }
 
       .lower-grid { display: grid; grid-template-columns: minmax(0, 1.43fr) minmax(320px, .83fr); gap: 18px; margin-top: 18px; }
-      .table-panel, .explanation-panel { padding: 22px 23px; }
+      .table-panel, .explanation-panel { min-width: 0; padding: 22px 23px; }
       .topline { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 16px; }
       .soft-tag { padding: 5px 8px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); background: var(--surface-soft); font-size: .75rem; font-weight: 700; white-space: nowrap; }
-      .table-wrap { overflow-x: auto; margin: 0 -4px; }
+      .table-wrap { max-width: calc(100% + 8px); overflow-x: auto; margin: 0 -4px; }
       table { width: 100%; min-width: 595px; border-collapse: collapse; font-size: .84rem; }
       th { padding: 0 10px 10px; color: var(--muted); font-size: .75rem; font-weight: 780; letter-spacing: .075em; text-align: left; text-transform: uppercase; }
       td { padding: 13px 10px; border-top: 1px solid var(--line); color: var(--ink-soft); vertical-align: middle; }
