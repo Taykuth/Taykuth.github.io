@@ -1,0 +1,40 @@
+{
+  "scaler": {
+    "means": {
+      "temperature_c": 56.520331695331684,
+      "vibration_mm_s": 1.6118108108108093,
+      "motor_current_a": 28.940454545454525,
+      "hydraulic_pressure_bar": 145.6768304668307,
+      "coolant_flow_l_min": 14.773746928746938,
+      "production_rate_units_h": 75.41879606879607
+    },
+    "stdevs": {
+      "temperature_c": 5.486465535012716,
+      "vibration_mm_s": 0.4814141278437403,
+      "motor_current_a": 4.721468693516383,
+      "hydraulic_pressure_bar": 23.53666444345062,
+      "coolant_flow_l_min": 0.6454785778254758,
+      "production_rate_units_h": 5.142163812384803
+    }
+  },
+  "logistic": {
+    "weights": [
+      -0.19114777193972596,
+      0.31626219759611446,
+      0.3900560978390753,
+      -0.021796477025208122,
+      -0.41406116399889764,
+      -0.25452161911297927,
+      -0.015487315265707418
+    ],
+    "positiveWeight": 0.8905908096280087
+  },
+  "features": [
+    "temperature_c",
+    "vibration_mm_s",
+    "motor_current_a",
+    "hydraulic_pressure_bar",
+    "coolant_flow_l_min",
+    "production_rate_units_h"
+  ]
+}
