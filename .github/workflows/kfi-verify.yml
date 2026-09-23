@@ -1,0 +1,30 @@
+name: Verify KFI source
+
+on:
+  push:
+    paths:
+      - "kocaeli-factory-intelligence/source/**"
+      - ".github/workflows/kfi-verify.yml"
+  pull_request:
+    paths:
+      - "kocaeli-factory-intelligence/source/**"
+      - ".github/workflows/kfi-verify.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: kocaeli-factory-intelligence/source
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Generate, train and test
+        run: npm run verify
