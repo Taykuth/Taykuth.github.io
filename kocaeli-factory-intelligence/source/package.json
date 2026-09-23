@@ -1,0 +1,16 @@
+{
+  "name": "kocaeli-factory-intelligence",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "generate": "node src/generate-telemetry.mjs",
+    "train": "node src/train-models.mjs",
+    "test": "node --test",
+    "verify": "npm run generate && npm run train && npm test",
+    "serve": "node src/server.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
+
+
