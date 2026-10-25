@@ -1,260 +1,277 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bora Taykut HINDAL | AI Engineer</title>
-    <meta name="description" content="Bora Taykut Hindal, AI Engineer and Python backend developer in Gebze, Kocaeli. LLM automation, predictive maintenance and graph neural network projects.">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bora Taykut Hindal, AI engineer</title>
+<meta name="description" content="AI engineer in Gebze, Kocaeli. Predictive maintenance, LLM pipelines and graph neural networks, each project with its measurements and limits.">
+<link rel="canonical" href="https://taykuth.github.io/">
+<link rel="alternate" hreflang="en" href="https://taykuth.github.io/">
+<link rel="alternate" hreflang="tr" href="https://taykuth.github.io/tr/">
+<link rel="alternate" hreflang="x-default" href="https://taykuth.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Bora Taykut Hindal, AI engineer">
+<meta property="og:description" content="AI engineer in Gebze, Kocaeli. Predictive maintenance, LLM pipelines and graph neural networks, each project with its measurements and limits.">
+<meta property="og:url" content="https://taykuth.github.io/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://taykuth.github.io/assets/img/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#eef1ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f242a" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/archivo-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/source-serif-4-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
+<link rel="stylesheet" href="/assets/site.css">
+<script>
+(function(){try{if(localStorage.getItem('lang-choice'))return;var l=(navigator.languages&&navigator.languages[0])||navigator.language||'';if(/^tr\b/i.test(l))location.replace('/tr/'+location.hash);}catch(e){}})();
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Bora Taykut Hindal", "url": "https://taykuth.github.io/", "jobTitle": "AI Engineer", "email": "mailto:btaykuthindal@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Gebze", "addressRegion": "Kocaeli", "addressCountry": "TR"}, "alumniOf": "OSTİM Teknik Üniversitesi", "sameAs": ["https://github.com/Taykuth", "https://www.linkedin.com/in/borataykuthindal"], "image": "https://taykuth.github.io/assets/img/profile.jpg"}</script>
 </head>
 <body>
-    <!-- Dynamic Background -->
-    <div class="bg-animation">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-    </div>
-
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-content">
-            <a href="#" class="logo">Taykuth<span>.ai</span></a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact" class="btn-outline">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="/">Bora Taykut Hindal</a>
+    <nav aria-label="Sections">
+      <ul class="nav-sections">
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="lang-switch" href="/tr/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+      <a class="btn btn--small" href="/assets/cv/Bora_Taykut_Hindal_CV_EN.pdf" download>CV</a>
     </nav>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <header id="hero" class="section reveal hero-flex">
-        <div class="hero-content">
-            <p class="greeting">Hello, I am</p>
-            <h1 class="glitch" data-text="Bora Taykut HINDAL">Bora Taykut HINDAL</h1>
-            <h2 class="title"><span class="typing-text"></span><span class="cursor">&nbsp;</span></h2>
-            <p class="hero-desc">
-                I build LLM pipelines and machine learning prototypes in Python, from the data and the model to the API and the screen people use. 2026 AI Engineering graduate based in Gebze, Kocaeli.
-            </p>
-            <div class="hero-cta">
-                <a href="#projects" class="btn-primary">View Projects</a>
-                <a href="https://github.com/Taykuth" target="_blank" class="btn-secondary"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://linkedin.com/in/borataykuthindal" target="_blank" class="btn-secondary"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="profile.jpg" alt="Bora Taykut HINDAL">
-        </div>
+<main id="main">
+  <section class="hero wrap" aria-labelledby="name">
+    <div class="hero-text">
+      <p class="role">AI engineer, Gebze, Kocaeli</p>
+      <h1 id="name" class="name">Bora Taykut <span class="name-last">Hindal</span></h1>
+      <p class="statement">I turn data into decisions people can act on: from sensor readings to a maintenance call, from a product catalog to content a person has approved. Every project on this page says how it was measured and where it falls short.</p>
+      <div class="actions">
+        <a class="btn" href="/assets/cv/Bora_Taykut_Hindal_CV_EN.pdf" download>Download CV (PDF)</a>
+        <a class="textlink" href="/assets/cv/Bora_Taykut_Hindal_CV_TR.pdf" download>Turkish CV</a>
+        <a class="textlink" href="https://github.com/Taykuth" target="_blank" rel="noopener">GitHub</a>
+        <a class="textlink" href="https://www.linkedin.com/in/borataykuthindal" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="textlink" href="mailto:btaykuthindal@gmail.com">btaykuthindal@gmail.com</a>
+      </div>
+    </div>
+    <img class="portrait" src="/assets/img/profile.jpg" alt="Portrait of Bora Taykut Hindal" width="400" height="400">
+  </section>
+
+  <figure class="strip" aria-labelledby="strip-caption">
+    <div class="strip-chart">
+      <canvas id="trace" role="img" aria-label="A synthetic vibration signal crossing an alert threshold. My predictive-maintenance demo does the same with a model behind it."
+        data-y-label="vibration, mm/s" data-x-label="last 48 hours" data-threshold="alert threshold"
+        data-now="now" data-hours="h"></canvas>
+    </div>
+    <figcaption id="strip-caption" class="wrap strip-caption">A synthetic vibration signal crossing an alert threshold. My predictive-maintenance demo does the same with a model behind it. <a class="textlink" href="/kocaeli-factory-intelligence/">Open the live demo</a></figcaption>
+  </figure>
+
+  <section id="work" class="work" aria-labelledby="work-title">
+    <div class="wrap section-head">
+      <h2 id="work-title">Projects</h2>
+      <p class="lede">Five projects, newest first. The first is still being built.</p>
+    </div>
+    
+<article class="case is-featured" id="maintagent" aria-labelledby="maintagent-title">
+  <div class="wrap case-grid">
+    <header class="case-head">
+      <p class="status status--progress">In progress, October 2026</p>
+      <h3 id="maintagent-title">MaintAgent</h3>
+      <p class="oneliner">A maintenance agent for industrial machines: a failure-risk model trained on sensor data, and an LLM agent that will investigate faults with tools and draft work orders for a person to approve.</p>
+      <p class="case-links"><a class="textlink" href="https://github.com/Taykuth/maintagent" target="_blank" rel="noopener">Code on GitHub</a></p>
     </header>
+    <ol class="pipeline" aria-label="How it flows"><li class=""><span class="step-no" aria-hidden="true">1</span><span class="step-label">Azure PdM CSV files</span></li><li class=""><span class="step-no" aria-hidden="true">2</span><span class="step-label">DuckDB</span></li><li class=""><span class="step-no" aria-hidden="true">3</span><span class="step-label">SQL features from the past 24 h only</span></li><li class=""><span class="step-no" aria-hidden="true">4</span><span class="step-label">LightGBM: risk and likely component</span></li><li class=""><span class="step-no" aria-hidden="true">5</span><span class="step-label">Feature contributions</span></li><li class="is-planned"><span class="step-no" aria-hidden="true">6</span><span class="step-label">Agent with tools <span class="planned-tag">planned</span></span></li><li class="is-planned"><span class="step-no" aria-hidden="true">7</span><span class="step-label">Work order, human approval <span class="planned-tag">planned</span></span></li></ol>
+    <div class="case-built">
+      <h4>What I built</h4>
+      <ul class="built-list"><li>A loader that reads the five CSV files of the Microsoft Azure Predictive Maintenance dataset into DuckDB, accepts two date formats and stops on any unreadable row.</li><li>All features in one SQL query: 3- and 24-hour sensor statistics, error counts, days since each component was replaced (ASOF joins), machine model and age.</li><li>A multiclass LightGBM model that gives the risk of failure in the next 24 hours and the component most likely to fail, with feature contributions for each prediction.</li><li>A z-score rule as the baseline the model has to beat, and recall at 80% precision as the operating metric.</li><li>A fixed &#x27;now&#x27; (AS_OF) in the configuration, so the agent&#x27;s tools will not see data from after the moment they reason about. Tool calling is already checked against Groq&#x27;s OpenAI-compatible API.</li></ul>
+      <div class="decision"><h4>A score that is too good</h4><p>The first run on the real dataset scored PR-AUC 0.999. In maintenance data that usually points to leakage or an artifact of the dataset, not to a great model. I wrote an ablation that retrains on separate feature groups and on 0–24, 24–48 and 48–72 hour horizons to find what carries the score, and a test that fails if any feature reads data from after the prediction time.</p></div>
+    </div>
+    <aside class="ledger" aria-label="Measured">
+      <h4>Measured</h4>
+      <dl><div class="metric"><dt>Tests</dt><dd>13 passing (pytest)</dd></div><div class="metric"><dt>Split</dt><dd>By time: train Jan–Jul 2015, test Aug–Dec 2015, one-day gap</dd></div><div class="metric"><dt>Model metrics</dt><dd>Held back until the ablation explains the 0.999</dd></div></dl>
+      
+      <div class="limit">
+        <h4>Where it falls short</h4>
+        <p>The agent, its tools and the work-order approval loop are not built yet. The model has only been evaluated on one public dataset.</p>
+      </div>
+    </aside>
+    <p class="stack"><span class="stack-label">Stack</span> Python, DuckDB, SQL, LightGBM, scikit-learn, pytest, Groq API</p>
+    
+  </div>
+</article>
 
-    <!-- About Section -->
-    <section id="about" class="section reveal">
-        <div class="container">
-            <h2 class="section-title">About Me<span>.</span></h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>
-                        I graduated in <strong>Artificial Intelligence Engineering</strong> from <strong>OSTİM Technical University</strong> in 2026 and have done three internships in machine learning and LLM automation.
-                    </p>
-                    <p>
-                        Most of my work is applied: taking a business task, such as writing product descriptions for a whole catalog or answering the same patient questions every day, and turning it into a pipeline with an LLM or a model in the middle, clear rules around it and a person reviewing the output.
-                    </p>
-                    <p>
-                        I care about stating what a model can and cannot do. Each project below says how it was measured and where it falls short.
-                    </p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <i class="fas fa-robot highlight-icon"></i>
-                        <h3>Skywalker.tc</h3>
-                        <p class="role-meta">SEO Intern (LLM Automation) · Jan–Jul 2026</p>
-                        <p>Python pipeline that writes SEO product descriptions for brand catalogs on Trendyol, with rule checks and human approval. Also built the Next.js review interface for AI-generated product images.</p>
-                    </div>
-                    <div class="stat-card">
-                        <i class="fas fa-flask highlight-icon"></i>
-                        <h3>İsTeknolojileri</h3>
-                        <p class="role-meta">AI Engineering Intern · Jan–May 2025</p>
-                        <p>Data preprocessing and scikit-learn experiments for model training and evaluation.</p>
-                    </div>
-                    <div class="stat-card">
-                        <i class="fas fa-database highlight-icon"></i>
-                        <h3>Mavinci</h3>
-                        <p class="role-meta">Machine Learning Engineering Intern · Jan–May 2024</p>
-                        <p>ML dataset preparation with SQL and data cleaning with pandas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<article class="case" id="kfi" aria-labelledby="kfi-title">
+  <div class="wrap case-grid">
+    <header class="case-head">
+      <p class="status status--live">Live demo</p>
+      <h3 id="kfi-title">Kocaeli Factory Intelligence</h3>
+      <p class="oneliner">A predictive-maintenance prototype for production lines. Telemetry goes in; a 24-hour failure risk, an anomaly score, the signals behind it and a first maintenance action come out.</p>
+      <p class="case-links"><a class="textlink" href="/kocaeli-factory-intelligence/">Open the live demo</a>
+<a class="textlink" href="https://github.com/Taykuth/Taykuth.github.io/tree/main/kocaeli-factory-intelligence" target="_blank" rel="noopener">Code on GitHub</a></p>
+    </header>
+    <ol class="pipeline" aria-label="How it flows"><li class=""><span class="step-no" aria-hidden="true">1</span><span class="step-label">Deterministic telemetry</span></li><li class=""><span class="step-no" aria-hidden="true">2</span><span class="step-label">Feature validation</span></li><li class=""><span class="step-no" aria-hidden="true">3</span><span class="step-label">z-score anomaly and logistic regression</span></li><li class=""><span class="step-no" aria-hidden="true">4</span><span class="step-label">Model files as JSON</span></li><li class=""><span class="step-no" aria-hidden="true">5</span><span class="step-label">Dashboard in the browser</span></li></ol>
+    <div class="case-built">
+      <h4>What I built</h4>
+      <ul class="built-list"><li>A deterministic telemetry generator: 8 machines, 4,608 readings at 15-minute intervals and 24 failure events over six days.</li><li>A multivariate z-score anomaly score and a class-weighted logistic regression trained with gradient descent, both in plain JavaScript.</li><li>A dashboard that runs the model in the browser from JSON files, plus an optional Node.js HTTP API that serves the same model.</li><li>A screen that keeps the scenario label apart from the model output, so a scenario alarm cannot be read as a prediction.</li><li>Node&#x27;s test runner and a GitHub Actions workflow that regenerates the data, retrains and tests on every change.</li></ul>
+      <div class="decision"><h4>Split by time, report false alarms</h4><p>Neighbouring telemetry rows are almost identical, so a random split leaks the future into training. I split by time, 75% for training and 25% for testing, and report the false-alarm rate next to recall, because a maintenance team pays for every false call.</p></div>
+    </div>
+    <aside class="ledger" aria-label="Measured">
+      <h4>Measured</h4>
+      <dl><div class="metric"><dt>Precision</dt><dd>65.8%</dd></div><div class="metric"><dt>Recall</dt><dd>52.9%</dd></div><div class="metric"><dt>F1</dt><dd>58.7%</dd></div><div class="metric"><dt>False-alarm rate</dt><dd>19.4%</dd></div></dl>
+      <p class="ledger-note">Temporal 75/25 holdout on synthetic data.</p>
+      <div class="limit">
+        <h4>Where it falls short</h4>
+        <p>The data is synthetic, so these are not results from a factory. A real pilot needs historian or SCADA telemetry joined with maintenance records, and failure labels agreed with the maintenance team.</p>
+      </div>
+    </aside>
+    <p class="stack"><span class="stack-label">Stack</span> JavaScript (ES modules), Node.js, GitHub Actions, Docker</p>
+    <figure class="case-figure"><img src="/assets/img/kfi.webp" alt="The Kocaeli Factory Intelligence dashboard with risk, anomaly score and maintenance actions for each machine" width="1280" height="800" loading="lazy" decoding="async"></figure>
+  </div>
+</article>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section reveal">
-        <div class="container">
-            <h2 class="section-title">Projects<span>.</span></h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <i class="far fa-folder-open folder-icon"></i>
-                            <div class="project-links">
-                                <a href="https://github.com/Taykuth/Taykuth.github.io/tree/main/kocaeli-factory-intelligence" target="_blank" aria-label="View source"><i class="fab fa-github"></i></a>
-                                <a href="/kocaeli-factory-intelligence/" target="_blank" aria-label="Open live demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
-                            </div>
-                        </div>
-                        <h3 class="project-title">Kocaeli Factory Intelligence</h3>
-                        <p class="project-desc">
-                            Predictive-maintenance prototype for production lines. Turns machine telemetry into an anomaly score, a 24-hour failure risk, the signals behind it and a first maintenance action. On a time-based holdout of synthetic telemetry: precision 65.8%, recall 52.9%, false-alarm rate 19.4%.
-                        </p>
-                        <div class="project-tech">
-                            <span>Logistic regression</span>
-                            <span>Anomaly detection</span>
-                            <span>Live demo</span>
-                        </div>
-                    </div>
-                </div>
+<article class="case" id="trendyol" aria-labelledby="trendyol-title">
+  <div class="wrap case-grid">
+    <header class="case-head">
+      <p class="status status--internship">Internship, Skywalker.tc, 2026</p>
+      <h3 id="trendyol-title">Trendyol SEO description pipeline</h3>
+      <p class="oneliner">A Python pipeline that pulls a brand&#x27;s catalog from the Trendyol Seller API, writes a new SEO description for every product with OpenAI, checks each one against marketplace rules and hands the results to a person. Nothing is published automatically.</p>
+      <p class="case-links"><a class="textlink" href="https://github.com/Taykuth/seo-ai-trendyol-product-description" target="_blank" rel="noopener">Code on GitHub</a></p>
+    </header>
+    <ol class="pipeline" aria-label="How it flows"><li class=""><span class="step-no" aria-hidden="true">1</span><span class="step-label">Trendyol Seller API</span></li><li class=""><span class="step-no" aria-hidden="true">2</span><span class="step-label">Fetch and normalize</span></li><li class=""><span class="step-no" aria-hidden="true">3</span><span class="step-label">gpt-4.1-mini</span></li><li class=""><span class="step-no" aria-hidden="true">4</span><span class="step-label">Rule checks, up to 2 retries</span></li><li class=""><span class="step-no" aria-hidden="true">5</span><span class="step-label">Review sheet</span></li><li class=""><span class="step-no" aria-hidden="true">6</span><span class="step-label">Human approval</span></li></ol>
+    <div class="case-built">
+      <h4>What I built</h4>
+      <ul class="built-list"><li>Catalog fetch and normalization into a working spreadsheet, with retry and rate-limit handling.</li><li>Rule checks on every output: empty text, HTML, ten banned claims such as &#x27;en iyi&#x27;, &#x27;garanti&#x27; and &#x27;tedavi&#x27;, and fewer than 100 words. A failed description is regenerated up to two more times, then kept as FAIL so the reviewer sees it.</li><li>A review sheet that puts the original description next to the new one and its status.</li><li>A second mode for long product pages that stores every generation in SQLite with a version number and a JSON validation report.</li></ul>
+      <div class="decision"><h4>A person signs off</h4><p>Marketplace rules punish exaggerated and medical claims, and a language model will sometimes make them. Automated checks catch the obvious failures; publishing stays a human decision, so the pipeline ends in a review sheet instead of an upload.</p></div>
+    </div>
+    <aside class="ledger" aria-label="Measured">
+      <h4>Measured</h4>
+      <dl><div class="metric"><dt>Products</dt><dd>36, one brand catalog</dd></div><div class="metric"><dt>Passed rule checks</dt><dd>36 of 36</dd></div><div class="metric"><dt>Average length</dt><dd>40 → 118 words</dd></div><div class="metric"><dt>Originals that were raw HTML</dt><dd>5</dd></div></dl>
+      <p class="ledger-note">Generated descriptions ranged from 101 to 138 words.</p>
+      <div class="limit">
+        <h4>Where it falls short</h4>
+        <p>The checks are automated; whether a description was good enough was a person&#x27;s call, and there is no quality score beyond that. Client data is not in the repository.</p>
+      </div>
+    </aside>
+    <p class="stack"><span class="stack-label">Stack</span> Python, OpenAI API, pandas, openpyxl, SQLite</p>
+    
+  </div>
+</article>
 
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <i class="far fa-folder-open folder-icon"></i>
-                            <div class="project-links">
-                                <a href="https://github.com/Taykuth/seo-ai-trendyol-product-description" target="_blank" aria-label="View source"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <h3 class="project-title">Trendyol SEO Description Pipeline</h3>
-                        <p class="project-desc">
-                            Internship project. Fetches a brand's catalog from the Trendyol Seller API, writes new descriptions with OpenAI, rejects outputs with banned claims, HTML or too few words, and produces a review sheet. On a 36-product catalog, descriptions went from 40 to 118 words on average.
-                        </p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>OpenAI API</span>
-                            <span>pandas</span>
-                        </div>
-                    </div>
-                </div>
+<article class="case" id="neobioai" aria-labelledby="neobioai-title">
+  <div class="wrap case-grid">
+    <header class="case-head">
+      <p class="status status--thesis">Graduation thesis, 2026</p>
+      <h3 id="neobioai-title">NeoBioAI</h3>
+      <p class="oneliner">Predicts binding affinity (pKd) from a molecule&#x27;s structure with a graph neural network, served through FastAPI and a Next.js interface that shows which atoms drive a prediction.</p>
+      <p class="case-links"><a class="textlink" href="https://github.com/Taykuth/NeoBioAI" target="_blank" rel="noopener">Code on GitHub</a></p>
+    </header>
+    <ol class="pipeline" aria-label="How it flows"><li class=""><span class="step-no" aria-hidden="true">1</span><span class="step-label">SMILES string</span></li><li class=""><span class="step-no" aria-hidden="true">2</span><span class="step-label">Atom-bond graph (RDKit)</span></li><li class=""><span class="step-no" aria-hidden="true">3</span><span class="step-label">GINEConv network</span></li><li class=""><span class="step-no" aria-hidden="true">4</span><span class="step-label">pKd and atom explanations</span></li><li class=""><span class="step-no" aria-hidden="true">5</span><span class="step-label">FastAPI and Next.js</span></li></ol>
+    <div class="case-built">
+      <h4>What I built</h4>
+      <ul class="built-list"><li>A 4-layer GINEConv network on molecular graphs with bond features, 340,481 parameters, trained with early stopping.</li><li>A FastAPI backend for single and batch CSV prediction, and a Next.js interface that highlights the atoms behind a prediction.</li><li>An LLM-written summary report for each batch.</li></ul>
+      <div class="decision"><h4>Say what the model ignores</h4><p>The model only sees the ligand, not the protein, so it predicts one value per molecule whatever the target. An earlier README compared it with docking; I removed that comparison because the two do different things.</p></div>
+    </div>
+    <aside class="ledger" aria-label="Measured">
+      <h4>Measured</h4>
+      <dl><div class="metric"><dt>Test RMSE</dt><dd>1.563 pKd</dd></div><div class="metric"><dt>Test Pearson r</dt><dd>0.632</dd></div><div class="metric"><dt>Inference</dt><dd>3.8 ms per molecule, one CPU thread</dd></div><div class="metric"><dt>Training</dt><dd>97 s on CPU</dd></div></dl>
+      <p class="ledger-note">2,000-complex subset of PDBBind v2020, random 80/10/10 split.</p>
+      <div class="limit">
+        <h4>Where it falls short</h4>
+        <p>No protein input, and a small dataset: validation error starts rising after epoch 17.</p>
+      </div>
+    </aside>
+    <p class="stack"><span class="stack-label">Stack</span> PyTorch Geometric, RDKit, FastAPI, Next.js</p>
+    
+  </div>
+</article>
 
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <i class="far fa-folder-open folder-icon"></i>
-                            <div class="project-links">
-                                <a href="https://github.com/Taykuth/ClinicChatBotAi" target="_blank" aria-label="View source"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <h3 class="project-title">Clinic AI Chatbot</h3>
-                        <p class="project-desc">
-                            Turkish chatbot for dental and aesthetic clinics. Answers questions on services, prices and hours from a clinic profile, refuses to diagnose and sends appointment requests to WhatsApp. Rejects prompt-override attempts from the browser and is covered by tests.
-                        </p>
-                        <div class="project-tech">
-                            <span>FastAPI</span>
-                            <span>gpt-4o-mini</span>
-                            <span>pytest</span>
-                        </div>
-                    </div>
-                </div>
+<article class="case" id="clinic" aria-labelledby="clinic-title">
+  <div class="wrap case-grid">
+    <header class="case-head">
+      <p class="status status--project">Personal project</p>
+      <h3 id="clinic-title">Clinic AI chatbot</h3>
+      <p class="oneliner">A Turkish customer-service chatbot for dental and aesthetic clinics. It answers questions on services, prices and opening hours from the clinic&#x27;s own profile, never diagnoses, and sends appointment requests to WhatsApp.</p>
+      <p class="case-links"><a class="textlink" href="https://github.com/Taykuth/ClinicChatBotAi" target="_blank" rel="noopener">Code on GitHub</a></p>
+    </header>
+    <ol class="pipeline" aria-label="How it flows"><li class=""><span class="step-no" aria-hidden="true">1</span><span class="step-label">Browser chat</span></li><li class=""><span class="step-no" aria-hidden="true">2</span><span class="step-label">FastAPI /chat</span></li><li class=""><span class="step-no" aria-hidden="true">3</span><span class="step-label">Input checks</span></li><li class=""><span class="step-no" aria-hidden="true">4</span><span class="step-label">Clinic profile to system prompt</span></li><li class=""><span class="step-no" aria-hidden="true">5</span><span class="step-label">gpt-4o-mini</span></li></ol>
+    <div class="case-built">
+      <h4>What I built</h4>
+      <ul class="built-list"><li>A system prompt built from a clinic profile in JSON, so a new clinic is a new file, not new code.</li><li>A server that does not trust the history the browser sends: system messages from the client are dropped, messages over 1,000 characters are rejected and each IP gets 20 messages a minute.</li><li>Errors are logged on the server, and the patient sees a plain message.</li></ul>
+      <div class="decision"><h4>Don&#x27;t trust the browser</h4><p>The conversation lives in the browser, so anyone can edit it. Keeping only user and assistant turns stops a visitor from rewriting the clinic&#x27;s rules from the developer console.</p></div>
+    </div>
+    <aside class="ledger" aria-label="Measured">
+      <h4>Measured</h4>
+      <dl><div class="metric"><dt>Tests</dt><dd>7 passing, with a fake OpenAI client</dd></div><div class="metric"><dt>Answer quality</dt><dd>Not measured yet</dd></div></dl>
+      
+      <div class="limit">
+        <h4>Where it falls short</h4>
+        <p>The tests cover input handling, not answer quality. There is no evaluation set of patient questions yet.</p>
+      </div>
+    </aside>
+    <p class="stack"><span class="stack-label">Stack</span> FastAPI, OpenAI gpt-4o-mini, pytest, Render</p>
+    
+  </div>
+</article>
+  </section>
 
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <i class="far fa-folder-open folder-icon"></i>
-                            <div class="project-links">
-                                <a href="https://github.com/Taykuth/NeoBioAI" target="_blank" aria-label="View source"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <h3 class="project-title">NeoBioAI</h3>
-                        <p class="project-desc">
-                            Graduation thesis. A GINEConv graph neural network that predicts binding affinity (pKd) from a molecule's structure, with atom-level explanations, served through FastAPI and Next.js. Test RMSE 1.56 and Pearson r 0.63 on a PDBBind v2020 subset; the model does not yet use the target protein.
-                        </p>
-                        <div class="project-tech">
-                            <span>PyTorch Geometric</span>
-                            <span>RDKit</span>
-                            <span>FastAPI</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section class="also wrap" aria-labelledby="also-title">
+    <h2 id="also-title" class="h-small">Smaller work</h2>
+    <ul class="also-list"><li><a class="also-title" href="https://github.com/Taykuth/ai-basketball-coach" target="_blank" rel="noopener">AI Basketball Coach</a><p>Counts dribbles and steps from video and flags a possible travel, using YOLOv8 pose and a ball detector. Built with my friend Osman; accuracy not measured yet.</p></li>
+<li><a class="also-title" href="https://github.com/Taykuth/visionguard-ai" target="_blank" rel="noopener">VisionGuard AI</a><p>A full-stack quality-control dashboard demo with simulated detections, built on TanStack Start, React 19 and a Convex real-time backend. A UI demo, not an inference pipeline.</p></li>
+<li><a class="also-title" href="https://github.com/Taykuth/sports-llm-rag" target="_blank" rel="noopener">Sports LLM notebook</a><p>LoRA fine-tuning and FAISS retrieval on Turkish basketball terms, as a learning exercise. The write-up explains why retrieval picked the wrong documents: an English embedding model on Turkish questions.</p></li></ul>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section reveal">
-        <div class="container">
-            <h2 class="section-title">Skills<span>.</span></h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-layer-group"></i> AI / ML</h3>
-                    <ul class="skill-list">
-                        <li>LLM applications (OpenAI API)</li>
-                        <li>Prompt design and output validation</li>
-                        <li>PyTorch, PyTorch Geometric</li>
-                        <li>Graph neural networks</li>
-                        <li>scikit-learn</li>
-                        <li>Hugging Face Transformers, PEFT/LoRA</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-terminal"></i> Languages & Backend</h3>
-                    <ul class="skill-list">
-                        <li>Python</li>
-                        <li>FastAPI, REST APIs</li>
-                        <li>SQL</li>
-                        <li>pandas, NumPy</li>
-                        <li>TypeScript / JavaScript</li>
-                        <li>React, Next.js</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools</h3>
-                    <ul class="skill-list">
-                        <li>Git & GitHub</li>
-                        <li>GitHub Actions</li>
-                        <li>Docker</li>
-                        <li>Render</li>
-                        <li>pytest</li>
-                        <li>Jupyter / Colab</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="experience" class="wrap experience" aria-labelledby="exp-title">
+    <h2 id="exp-title">Experience</h2>
+    <ol class="timeline"><li><p class="when">Jan–Jul 2026</p><div class="what"><h3>Skywalker.tc</h3><p class="role-line">SEO intern (LLM automation)</p><p>Built the Trendyol description pipeline above, and the Next.js and TypeScript review screen my 10-person team used for AI-generated product images: side-by-side variants, zoom, approve, reject, regenerate and batch ZIP download.</p></div></li>
+<li><p class="when">Jan–May 2025</p><div class="what"><h3>İsTeknolojileri</h3><p class="role-line">AI engineering intern</p><p>Preprocessed datasets in Python and ran scikit-learn experiments for training, testing and evaluation.</p></div></li>
+<li><p class="when">Jan–May 2024</p><div class="what"><h3>Mavinci</h3><p class="role-line">Machine learning engineering intern</p><p>Prepared machine learning datasets with SQL joins, filters and aggregations, and cleaned them with pandas.</p></div></li>
+<li><p class="when">2022–2026</p><div class="what"><h3>OSTİM Technical University, Ankara</h3><p class="role-line">B.Sc. Artificial Intelligence Engineering</p><p>Graduation thesis: NeoBioAI. Certificates: Google AI Essentials, BTK Academy Machine Learning, Hugging Face NLP Course. Languages: Turkish (native), English (B2).</p></div></li></ol>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section reveal">
-        <div class="container">
-            <div class="contact-card">
-                <h2 class="section-title" style="text-align: center; margin-bottom: 2rem;">Get In Touch<span>.</span></h2>
-                <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem; color: #8892b0;">
-                    I am looking for a junior AI engineer or Python backend role, in Kocaeli or remote. The fastest way to reach me is email (btaykuthindal@gmail.com) or LinkedIn.
-                </p>
-                <div class="contact-links">
-                    <a href="mailto:btaykuthindal@gmail.com" class="btn-primary"><i class="fas fa-paper-plane"></i> Email me</a>
-                    <a href="https://linkedin.com/in/borataykuthindal" target="_blank" class="btn-secondary"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="skills" class="wrap skills" aria-labelledby="skills-title">
+    <h2 id="skills-title">Skills, and where I used them</h2>
+    <table class="skills-table">
+      <thead><tr><th scope="col">Area</th><th scope="col">Tools</th><th scope="col">Where</th></tr></thead>
+      <tbody><tr><th scope="row" data-label="Area">LLM applications</th><td data-label="Tools">OpenAI API, tool calling (Groq), prompt and output validation</td><td data-label="Where">Trendyol pipeline, clinic chatbot, MaintAgent</td></tr>
+<tr><th scope="row" data-label="Area">Machine learning</th><td data-label="Tools">LightGBM, scikit-learn, PyTorch, PyTorch Geometric</td><td data-label="Where">MaintAgent, NeoBioAI, internships</td></tr>
+<tr><th scope="row" data-label="Area">Data</th><td data-label="Tools">SQL (DuckDB window functions, ASOF joins), pandas, NumPy</td><td data-label="Where">MaintAgent, Mavinci</td></tr>
+<tr><th scope="row" data-label="Area">Backend</th><td data-label="Tools">Python, FastAPI, Node.js, REST APIs</td><td data-label="Where">Clinic chatbot, NeoBioAI, Kocaeli Factory Intelligence</td></tr>
+<tr><th scope="row" data-label="Area">Frontend</th><td data-label="Tools">TypeScript, React, Next.js</td><td data-label="Where">Skywalker review screen, NeoBioAI</td></tr>
+<tr><th scope="row" data-label="Area">Computer vision</th><td data-label="Tools">YOLOv8 pose, OpenCV</td><td data-label="Where">AI Basketball Coach</td></tr>
+<tr><th scope="row" data-label="Area">Testing and delivery</th><td data-label="Tools">pytest, Node test runner, GitHub Actions, Docker, Render</td><td data-label="Where">MaintAgent, clinic chatbot, Kocaeli Factory Intelligence</td></tr>
+<tr><th scope="row" data-label="Area">Still learning</th><td data-label="Tools">LoRA (PEFT), FAISS, Sentence-Transformers</td><td data-label="Where">Sports LLM notebook</td></tr></tbody>
+    </table>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>Bora Taykut HINDAL &copy; 2026</p>
-        <div class="social-links">
-            <a href="https://github.com/Taykuth" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/borataykuthindal" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:btaykuthindal@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        </div>
-    </footer>
+  <section id="contact" class="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <h2 id="contact-title">Contact</h2>
+      <p class="contact-text">I&#x27;m looking for a junior AI engineer or Python backend role in Kocaeli, on Istanbul&#x27;s Anatolian side, in Ankara, Bursa or İzmir if I relocate, or remote. Email is the fastest way to reach me.</p>
+      <p class="email-line">
+        <a class="email" href="mailto:btaykuthindal@gmail.com">btaykuthindal@gmail.com</a>
+        <button class="copy" type="button" data-copy="btaykuthindal@gmail.com" data-done="Copied">Copy address</button>
+      </p>
+      <p class="contact-links">
+        <a class="textlink" href="https://www.linkedin.com/in/borataykuthindal" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="textlink" href="https://github.com/Taykuth" target="_blank" rel="noopener">GitHub</a>
+        <a class="textlink" href="/assets/cv/Bora_Taykut_Hindal_CV_EN.pdf" download>Download CV (PDF)</a>
+      </p>
+    </div>
+  </section>
+</main>
 
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+<footer class="footer wrap">
+  <p>© 2026 Bora Taykut Hindal. Plain HTML, CSS and JavaScript, generated from two JSON files by a small Python script. <a class="textlink" href="https://github.com/Taykuth/Taykuth.github.io" target="_blank" rel="noopener">Site source</a></p>
+</footer>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

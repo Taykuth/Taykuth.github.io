@@ -1,6 +1,6 @@
 # Bora Taykut HINDAL — AI Engineer Portfolio
 
-This repository powers my public portfolio and contains selected applied AI work. The featured project is **Kocaeli Factory Intelligence**, an explainable predictive-maintenance prototype for manufacturing operations.
+This repository powers my bilingual portfolio ([English](https://taykuth.github.io/) · [Türkçe](https://taykuth.github.io/tr/)) and hosts **Kocaeli Factory Intelligence**, an explainable predictive-maintenance prototype for manufacturing operations.
 
 [Portfolio](https://taykuth.github.io/) · [Live KFI demo](https://taykuth.github.io/kocaeli-factory-intelligence/) · [Project documentation](./kocaeli-factory-intelligence/) · [Source package](./kocaeli-factory-intelligence/source/)
 
@@ -52,13 +52,30 @@ The local service starts on http://127.0.0.1:8080.
 
 ~~~
 .
-├── index.html                              # Personal portfolio website
+├── index.html                    # English portfolio page (generated)
+├── tr/index.html                 # Turkish portfolio page (generated)
+├── content/en.json, tr.json      # All page text, one file per language
+├── tools/build.py                # Builds both pages from content/*.json (standard library only)
+├── tools/make_og.py, og.html     # Renders the social preview images
+├── assets/                       # CSS, JS, self-hosted fonts, images and the public CVs
 ├── kocaeli-factory-intelligence/
-│   ├── README.md                           # Project documentation
-│   ├── index.html                          # Public GitHub Pages dashboard
-│   ├── data/                               # Browser model artifacts
-│   └── source/                             # Reproducible modeling and API source
-└── .github/workflows/kfi-verify.yml        # Source verification workflow
+│   ├── README.md                 # Project documentation
+│   ├── index.html                # Public GitHub Pages dashboard
+│   ├── data/                     # Browser model artifacts
+│   └── source/                   # Reproducible modeling and API source
+└── .github/workflows/kfi-verify.yml
 ~~~
 
-For the complete technical narrative, start with the [Kocaeli Factory Intelligence README](./kocaeli-factory-intelligence/).
+## Editing the portfolio
+
+The two pages are generated, so edit the JSON, not the HTML:
+
+~~~bash
+# change text in content/en.json and content/tr.json, then
+python tools/build.py
+~~~
+
+- Projects, metrics and limits live under `work.projects` in each JSON file; keep the two languages in step.
+- The CV buttons point to `assets/cv/Bora_Taykut_Hindal_CV_EN.pdf` and `..._TR.pdf`. Replace those files to update the CV. The public copies leave out the phone number.
+- English is served at `/`, Turkish at `/tr/`. A browser set to Turkish is sent to `/tr/` once, unless the visitor has picked a language with the switch.
+- Fonts (Archivo, Source Serif 4) are self-hosted under `assets/fonts/` under the SIL Open Font License, so the site makes no third-party requests.
