@@ -6,114 +6,113 @@
   "alt_label": "Türkçe",
   "meta": {
     "title": "Bora Taykut Hindal, AI engineer",
-    "description": "AI engineer in Gebze, Kocaeli. Predictive maintenance, LLM pipelines and graph neural networks, each project with its measurements and limits.",
+    "description": "AI engineer in Kocaeli, Türkiye. Predictive maintenance, LLM automation and end-to-end AI products.",
     "og_locale": "en_US"
   },
+  "ui": {
+    "skip": "Skip to content",
+    "menu": "Sections"
+  },
   "nav": {
+    "about": "About",
     "work": "Projects",
-    "experience": "Experience",
     "skills": "Skills",
     "contact": "Contact",
     "cv": "CV"
   },
   "hero": {
-    "role": "AI engineer, Gebze, Kocaeli",
-    "statement": "I turn data into decisions people can act on: from sensor readings to a maintenance call, from a product catalog to content a person has approved. Every project on this page says how it was measured and where it falls short.",
-    "cv": "Download CV (PDF)",
+    "role": "AI engineer, Kocaeli",
+    "statement": "I turn machine learning models and large language models into tools people can actually use.",
+    "sub": "Predictive maintenance, LLM automation and end-to-end AI products.",
+    "cta_work": "See projects",
+    "cv": "Download CV",
     "cv_href": "/assets/cv/Bora_Taykut_Hindal_CV_EN.pdf",
     "cv_alt": "Turkish CV",
     "cv_alt_href": "/assets/cv/Bora_Taykut_Hindal_CV_TR.pdf",
-    "portrait_alt": "Portrait of Bora Taykut Hindal"
+    "portrait_alt": "Bora Taykut Hindal"
   },
   "signal": {
-    "y_label": "vibration, mm/s",
-    "x_label": "last 48 hours",
+    "y_label": "vibration",
     "threshold": "alert threshold",
-    "caption": "A synthetic vibration signal crossing an alert threshold. My predictive-maintenance demo does the same with a model behind it.",
-    "link": "Open the live demo",
-    "href": "/kocaeli-factory-intelligence/",
-    "now": "now",
-    "hours": "h"
+    "caption": "A vibration signal crossing its alert threshold (synthetic). You can watch the same thing live in my predictive-maintenance demo.",
+    "link": "Open the demo",
+    "href": "/kocaeli-factory-intelligence/"
+  },
+  "about": {
+    "heading": "About",
+    "paragraphs": [
+      "I'm an AI engineer based in Kocaeli, Türkiye. I like owning a problem end to end: preparing the data, training the model, serving it through an API and building the screen people use.",
+      "I've worked in data, machine learning and e-commerce teams across three internships. In the latest one I built the system that writes product descriptions for brand catalogs on Trendyol with AI and sends every one of them to a person for approval. These days I work mostly on predictive maintenance for factories and on assistants built on large language models."
+    ],
+    "focus_heading": "What I work on",
+    "focus": [
+      {
+        "title": "LLM applications",
+        "text": "Content generation, customer-service bots and assistants that use tools. I check model output against rules and leave the final call to a person."
+      },
+      {
+        "title": "Predictive maintenance",
+        "text": "Models that warn about machine failures from sensor data, and screens a maintenance team can read at a glance."
+      },
+      {
+        "title": "Machine learning",
+        "text": "Classification, forecasting and anomaly detection with LightGBM, scikit-learn, PyTorch and graph neural networks."
+      },
+      {
+        "title": "End-to-end products",
+        "text": "Backends in Python and FastAPI, interfaces in React and Next.js, shipped with Docker and GitHub Actions."
+      }
+    ],
+    "facts": [
+      {
+        "k": "Location",
+        "v": "Kocaeli, Türkiye"
+      },
+      {
+        "k": "Education",
+        "v": "B.Sc. Artificial Intelligence Engineering, OSTİM Technical University"
+      },
+      {
+        "k": "Experience",
+        "v": "Three internships at Skywalker.tc, İsTeknolojileri and Mavinci"
+      },
+      {
+        "k": "Languages",
+        "v": "Turkish, English (B2)"
+      }
+    ]
   },
   "work": {
-    "heading": "Projects",
-    "lede": "Five projects, newest first. The first is still being built.",
-    "labels": {
-      "built": "What I built",
-      "measured": "Measured",
-      "limit": "Where it falls short",
-      "stack": "Stack",
-      "pipeline": "How it flows",
-      "planned": "planned"
-    },
+    "heading": "Selected projects",
+    "lede": "Models trained on public datasets, a live demo, and a system that ran on a real client's catalog.",
+    "code": "Code on GitHub",
     "projects": [
       {
         "id": "maintagent",
-        "featured": true,
-        "status": "In progress, October 2026",
-        "kind": "progress",
+        "tag": "New",
         "title": "MaintAgent",
-        "oneliner": "A maintenance agent for industrial machines: a failure-risk model trained on sensor data, and an LLM agent that will investigate faults with tools and draft work orders for a person to approve.",
-        "pipeline": [
+        "text": "An AI maintenance assistant for industrial machines. From sensor data it predicts the risk of failure in the next 24 hours and the part most likely to fail, and shows which signals drove each prediction. Next up is the LLM assistant that investigates a fault with tools and drafts the work order.",
+        "points": [
+          "Microsoft Azure Predictive Maintenance data, processed with SQL on DuckDB",
+          "Multiclass LightGBM model for risk and the likely part",
+          "13 automated tests, including one that checks the model never sees the future"
+        ],
+        "stats": [
           {
-            "label": "Azure PdM CSV files"
+            "v": "24 h",
+            "k": "failure risk ahead"
           },
           {
-            "label": "DuckDB"
-          },
-          {
-            "label": "SQL features from the past 24 h only"
-          },
-          {
-            "label": "LightGBM: risk and likely component"
-          },
-          {
-            "label": "Feature contributions"
-          },
-          {
-            "label": "Agent with tools",
-            "planned": true
-          },
-          {
-            "label": "Work order, human approval",
-            "planned": true
+            "v": "13",
+            "k": "automated tests"
           }
         ],
-        "built": [
-          "A loader that reads the five CSV files of the Microsoft Azure Predictive Maintenance dataset into DuckDB, accepts two date formats and stops on any unreadable row.",
-          "All features in one SQL query: 3- and 24-hour sensor statistics, error counts, days since each component was replaced (ASOF joins), machine model and age.",
-          "A multiclass LightGBM model that gives the risk of failure in the next 24 hours and the component most likely to fail, with feature contributions for each prediction.",
-          "A z-score rule as the baseline the model has to beat, and recall at 80% precision as the operating metric.",
-          "A fixed 'now' (AS_OF) in the configuration, so the agent's tools will not see data from after the moment they reason about. Tool calling is already checked against Groq's OpenAI-compatible API."
-        ],
-        "decision": {
-          "title": "A score that is too good",
-          "text": "The first run on the real dataset scored PR-AUC 0.999. In maintenance data that usually points to leakage or an artifact of the dataset, not to a great model. I wrote an ablation that retrains on separate feature groups and on 0–24, 24–48 and 48–72 hour horizons to find what carries the score, and a test that fails if any feature reads data from after the prediction time."
-        },
-        "metrics": [
-          {
-            "k": "Tests",
-            "v": "13 passing (pytest)"
-          },
-          {
-            "k": "Split",
-            "v": "By time: train Jan–Jul 2015, test Aug–Dec 2015, one-day gap"
-          },
-          {
-            "k": "Model metrics",
-            "v": "Held back until the ablation explains the 0.999"
-          }
-        ],
-        "metrics_note": "",
-        "limit": "The agent, its tools and the work-order approval loop are not built yet. The model has only been evaluated on one public dataset.",
-        "stack": [
+        "tags": [
           "Python",
+          "LightGBM",
           "DuckDB",
           "SQL",
-          "LightGBM",
-          "scikit-learn",
-          "pytest",
-          "Groq API"
+          "pytest"
         ],
         "links": [
           {
@@ -124,74 +123,31 @@
       },
       {
         "id": "kfi",
-        "status": "Live demo",
-        "kind": "live",
+        "tag": "Live demo",
         "title": "Kocaeli Factory Intelligence",
-        "oneliner": "A predictive-maintenance prototype for production lines. Telemetry goes in; a 24-hour failure risk, an anomaly score, the signals behind it and a first maintenance action come out.",
-        "pipeline": [
-          {
-            "label": "Deterministic telemetry"
-          },
-          {
-            "label": "Feature validation"
-          },
-          {
-            "label": "z-score anomaly and logistic regression"
-          },
-          {
-            "label": "Model files as JSON"
-          },
-          {
-            "label": "Dashboard in the browser"
-          }
+        "text": "A predictive-maintenance dashboard for production lines. From machine telemetry it produces a 24-hour failure risk, an anomaly score and the first maintenance step for the shift. The model runs right in the browser.",
+        "points": [
+          "Trained on 8 machines and 4,608 synthetic readings",
+          "66% precision and 53% recall on a time-based test split",
+          "Scenario alarms and model predictions are shown separately"
         ],
-        "built": [
-          "A deterministic telemetry generator: 8 machines, 4,608 readings at 15-minute intervals and 24 failure events over six days.",
-          "A multivariate z-score anomaly score and a class-weighted logistic regression trained with gradient descent, both in plain JavaScript.",
-          "A dashboard that runs the model in the browser from JSON files, plus an optional Node.js HTTP API that serves the same model.",
-          "A screen that keeps the scenario label apart from the model output, so a scenario alarm cannot be read as a prediction.",
-          "Node's test runner and a GitHub Actions workflow that regenerates the data, retrains and tests on every change."
-        ],
-        "decision": {
-          "title": "Split by time, report false alarms",
-          "text": "Neighbouring telemetry rows are almost identical, so a random split leaks the future into training. I split by time, 75% for training and 25% for testing, and report the false-alarm rate next to recall, because a maintenance team pays for every false call."
+        "image": {
+          "src": "/assets/img/kfi.webp",
+          "alt": "The Kocaeli Factory Intelligence dashboard showing machine risk and anomaly scores",
+          "w": 1280,
+          "h": 800
         },
-        "metrics": [
-          {
-            "k": "Precision",
-            "v": "65.8%"
-          },
-          {
-            "k": "Recall",
-            "v": "52.9%"
-          },
-          {
-            "k": "F1",
-            "v": "58.7%"
-          },
-          {
-            "k": "False-alarm rate",
-            "v": "19.4%"
-          }
-        ],
-        "metrics_note": "Temporal 75/25 holdout on synthetic data.",
-        "limit": "The data is synthetic, so these are not results from a factory. A real pilot needs historian or SCADA telemetry joined with maintenance records, and failure labels agreed with the maintenance team.",
-        "stack": [
-          "JavaScript (ES modules)",
+        "tags": [
+          "JavaScript",
           "Node.js",
           "GitHub Actions",
           "Docker"
         ],
-        "image": {
-          "src": "/assets/img/kfi.webp",
-          "alt": "The Kocaeli Factory Intelligence dashboard with risk, anomaly score and maintenance actions for each machine",
-          "w": 1280,
-          "h": 800
-        },
         "links": [
           {
-            "label": "Open the live demo",
-            "href": "/kocaeli-factory-intelligence/"
+            "label": "Open the demo",
+            "href": "/kocaeli-factory-intelligence/",
+            "primary": true
           },
           {
             "label": "Code on GitHub",
@@ -201,65 +157,29 @@
       },
       {
         "id": "trendyol",
-        "status": "Internship, Skywalker.tc, 2026",
-        "kind": "internship",
-        "title": "Trendyol SEO description pipeline",
-        "oneliner": "A Python pipeline that pulls a brand's catalog from the Trendyol Seller API, writes a new SEO description for every product with OpenAI, checks each one against marketplace rules and hands the results to a person. Nothing is published automatically.",
-        "pipeline": [
+        "tag": "Internship project, Skywalker.tc",
+        "title": "Trendyol SEO description system",
+        "text": "A Python system that pulls products from the Trendyol Seller API and writes SEO descriptions with OpenAI. Every description is checked against marketplace rules; a failing one is rewritten, and all of them go to a person for approval before anything is published.",
+        "points": [
+          "Banned-claim, HTML and length checks, with up to two retries",
+          "A review sheet that puts the original and new description side by side",
+          "In the same internship, a Next.js review screen for AI-generated images"
+        ],
+        "stats": [
           {
-            "label": "Trendyol Seller API"
+            "v": "40 → 118",
+            "k": "average words per description"
           },
           {
-            "label": "Fetch and normalize"
-          },
-          {
-            "label": "gpt-4.1-mini"
-          },
-          {
-            "label": "Rule checks, up to 2 retries"
-          },
-          {
-            "label": "Review sheet"
-          },
-          {
-            "label": "Human approval"
+            "v": "36/36",
+            "k": "products passed the rule checks"
           }
         ],
-        "built": [
-          "Catalog fetch and normalization into a working spreadsheet, with retry and rate-limit handling.",
-          "Rule checks on every output: empty text, HTML, ten banned claims such as 'en iyi', 'garanti' and 'tedavi', and fewer than 100 words. A failed description is regenerated up to two more times, then kept as FAIL so the reviewer sees it.",
-          "A review sheet that puts the original description next to the new one and its status.",
-          "A second mode for long product pages that stores every generation in SQLite with a version number and a JSON validation report."
-        ],
-        "decision": {
-          "title": "A person signs off",
-          "text": "Marketplace rules punish exaggerated and medical claims, and a language model will sometimes make them. Automated checks catch the obvious failures; publishing stays a human decision, so the pipeline ends in a review sheet instead of an upload."
-        },
-        "metrics": [
-          {
-            "k": "Products",
-            "v": "36, one brand catalog"
-          },
-          {
-            "k": "Passed rule checks",
-            "v": "36 of 36"
-          },
-          {
-            "k": "Average length",
-            "v": "40 → 118 words"
-          },
-          {
-            "k": "Originals that were raw HTML",
-            "v": "5"
-          }
-        ],
-        "metrics_note": "Generated descriptions ranged from 101 to 138 words.",
-        "limit": "The checks are automated; whether a description was good enough was a person's call, and there is no quality score beyond that. Client data is not in the repository.",
-        "stack": [
+        "tags": [
           "Python",
           "OpenAI API",
+          "Trendyol Seller API",
           "pandas",
-          "openpyxl",
           "SQLite"
         ],
         "links": [
@@ -271,57 +191,25 @@
       },
       {
         "id": "neobioai",
-        "status": "Graduation thesis, 2026",
-        "kind": "thesis",
+        "tag": "Graduation thesis",
         "title": "NeoBioAI",
-        "oneliner": "Predicts binding affinity (pKd) from a molecule's structure with a graph neural network, served through FastAPI and a Next.js interface that shows which atoms drive a prediction.",
-        "pipeline": [
+        "text": "A graph neural network that predicts binding affinity from a molecule's structure. It is served with FastAPI; the Next.js interface shows which atoms drive a prediction, scores CSV batches and writes a summary report with an LLM.",
+        "points": [
+          "GINEConv network trained on the PDBBind dataset",
+          "Atom-level explanations",
+          "Fast prediction on a single CPU thread"
+        ],
+        "stats": [
           {
-            "label": "SMILES string"
+            "v": "3.8 ms",
+            "k": "per molecule"
           },
           {
-            "label": "Atom-bond graph (RDKit)"
-          },
-          {
-            "label": "GINEConv network"
-          },
-          {
-            "label": "pKd and atom explanations"
-          },
-          {
-            "label": "FastAPI and Next.js"
+            "v": "0.63",
+            "k": "Pearson r on the test set"
           }
         ],
-        "built": [
-          "A 4-layer GINEConv network on molecular graphs with bond features, 340,481 parameters, trained with early stopping.",
-          "A FastAPI backend for single and batch CSV prediction, and a Next.js interface that highlights the atoms behind a prediction.",
-          "An LLM-written summary report for each batch."
-        ],
-        "decision": {
-          "title": "Say what the model ignores",
-          "text": "The model only sees the ligand, not the protein, so it predicts one value per molecule whatever the target. An earlier README compared it with docking; I removed that comparison because the two do different things."
-        },
-        "metrics": [
-          {
-            "k": "Test RMSE",
-            "v": "1.563 pKd"
-          },
-          {
-            "k": "Test Pearson r",
-            "v": "0.632"
-          },
-          {
-            "k": "Inference",
-            "v": "3.8 ms per molecule, one CPU thread"
-          },
-          {
-            "k": "Training",
-            "v": "97 s on CPU"
-          }
-        ],
-        "metrics_note": "2,000-complex subset of PDBBind v2020, random 80/10/10 split.",
-        "limit": "No protein input, and a small dataset: validation error starts rising after epoch 17.",
-        "stack": [
+        "tags": [
           "PyTorch Geometric",
           "RDKit",
           "FastAPI",
@@ -333,83 +221,29 @@
             "href": "https://github.com/Taykuth/NeoBioAI"
           }
         ]
-      },
-      {
-        "id": "clinic",
-        "status": "Personal project",
-        "kind": "project",
-        "title": "Clinic AI chatbot",
-        "oneliner": "A Turkish customer-service chatbot for dental and aesthetic clinics. It answers questions on services, prices and opening hours from the clinic's own profile, never diagnoses, and sends appointment requests to WhatsApp.",
-        "pipeline": [
-          {
-            "label": "Browser chat"
-          },
-          {
-            "label": "FastAPI /chat"
-          },
-          {
-            "label": "Input checks"
-          },
-          {
-            "label": "Clinic profile to system prompt"
-          },
-          {
-            "label": "gpt-4o-mini"
-          }
-        ],
-        "built": [
-          "A system prompt built from a clinic profile in JSON, so a new clinic is a new file, not new code.",
-          "A server that does not trust the history the browser sends: system messages from the client are dropped, messages over 1,000 characters are rejected and each IP gets 20 messages a minute.",
-          "Errors are logged on the server, and the patient sees a plain message."
-        ],
-        "decision": {
-          "title": "Don't trust the browser",
-          "text": "The conversation lives in the browser, so anyone can edit it. Keeping only user and assistant turns stops a visitor from rewriting the clinic's rules from the developer console."
-        },
-        "metrics": [
-          {
-            "k": "Tests",
-            "v": "7 passing, with a fake OpenAI client"
-          },
-          {
-            "k": "Answer quality",
-            "v": "Not measured yet"
-          }
-        ],
-        "metrics_note": "",
-        "limit": "The tests cover input handling, not answer quality. There is no evaluation set of patient questions yet.",
-        "stack": [
-          "FastAPI",
-          "OpenAI gpt-4o-mini",
-          "pytest",
-          "Render"
-        ],
-        "links": [
-          {
-            "label": "Code on GitHub",
-            "href": "https://github.com/Taykuth/ClinicChatBotAi"
-          }
-        ]
       }
     ]
   },
-  "also": {
-    "heading": "Smaller work",
+  "more": {
+    "heading": "More projects",
     "items": [
       {
+        "title": "Clinic AI assistant",
+        "text": "A Turkish chatbot for dental and aesthetic clinics. It answers price and service questions from the clinic's profile, never diagnoses and sends appointment requests to WhatsApp.",
+        "tags": "FastAPI, gpt-4o-mini, pytest",
+        "href": "https://github.com/Taykuth/ClinicChatBotAi"
+      },
+      {
         "title": "AI Basketball Coach",
-        "text": "Counts dribbles and steps from video and flags a possible travel, using YOLOv8 pose and a ball detector. Built with my friend Osman; accuracy not measured yet.",
+        "text": "A computer-vision prototype that counts dribbles and steps from video and flags a possible travel. Built with my friend Osman.",
+        "tags": "YOLOv8, OpenCV, Python",
         "href": "https://github.com/Taykuth/ai-basketball-coach"
       },
       {
         "title": "VisionGuard AI",
-        "text": "A full-stack quality-control dashboard demo with simulated detections, built on TanStack Start, React 19 and a Convex real-time backend. A UI demo, not an inference pipeline.",
+        "text": "A UI demo of a quality-control and safety dashboard for production lines, with simulated detections and a real-time backend.",
+        "tags": "React, TanStack Start, Convex",
         "href": "https://github.com/Taykuth/visionguard-ai"
-      },
-      {
-        "title": "Sports LLM notebook",
-        "text": "LoRA fine-tuning and FAISS retrieval on Turkish basketball terms, as a learning exercise. The write-up explains why retrieval picked the wrong documents: an English embedding model on Turkish questions.",
-        "href": "https://github.com/Taykuth/sports-llm-rag"
       }
     ]
   },
@@ -417,84 +251,89 @@
     "heading": "Experience",
     "items": [
       {
-        "when": "Jan–Jul 2026",
+        "when": "2026",
         "org": "Skywalker.tc",
         "role": "SEO intern (LLM automation)",
-        "text": "Built the Trendyol description pipeline above, and the Next.js and TypeScript review screen my 10-person team used for AI-generated product images: side-by-side variants, zoom, approve, reject, regenerate and batch ZIP download."
+        "text": "Built the Trendyol description system, and the Next.js review screen for AI-generated images in a 10-person team."
       },
       {
-        "when": "Jan–May 2025",
+        "when": "2025",
         "org": "İsTeknolojileri",
         "role": "AI engineering intern",
-        "text": "Preprocessed datasets in Python and ran scikit-learn experiments for training, testing and evaluation."
+        "text": "Prepared datasets in Python, and trained and evaluated models with scikit-learn."
       },
       {
-        "when": "Jan–May 2024",
+        "when": "2024",
         "org": "Mavinci",
         "role": "Machine learning engineering intern",
-        "text": "Prepared machine learning datasets with SQL joins, filters and aggregations, and cleaned them with pandas."
+        "text": "Prepared machine learning datasets with SQL and pandas."
       },
       {
-        "when": "2022–2026",
-        "org": "OSTİM Technical University, Ankara",
-        "role": "B.Sc. Artificial Intelligence Engineering",
-        "text": "Graduation thesis: NeoBioAI. Certificates: Google AI Essentials, BTK Academy Machine Learning, Hugging Face NLP Course. Languages: Turkish (native), English (B2)."
+        "when": "B.Sc.",
+        "org": "OSTİM Technical University",
+        "role": "Artificial Intelligence Engineering",
+        "text": "Graduation thesis: NeoBioAI. Certificates: Google AI Essentials, BTK Academy Machine Learning, Hugging Face NLP Course."
       }
     ]
   },
   "skills": {
-    "heading": "Skills, and where I used them",
-    "cols": [
-      "Area",
-      "Tools",
-      "Where"
-    ],
-    "rows": [
-      [
-        "LLM applications",
-        "OpenAI API, tool calling (Groq), prompt and output validation",
-        "Trendyol pipeline, clinic chatbot, MaintAgent"
-      ],
-      [
-        "Machine learning",
-        "LightGBM, scikit-learn, PyTorch, PyTorch Geometric",
-        "MaintAgent, NeoBioAI, internships"
-      ],
-      [
-        "Data",
-        "SQL (DuckDB window functions, ASOF joins), pandas, NumPy",
-        "MaintAgent, Mavinci"
-      ],
-      [
-        "Backend",
-        "Python, FastAPI, Node.js, REST APIs",
-        "Clinic chatbot, NeoBioAI, Kocaeli Factory Intelligence"
-      ],
-      [
-        "Frontend",
-        "TypeScript, React, Next.js",
-        "Skywalker review screen, NeoBioAI"
-      ],
-      [
-        "Computer vision",
-        "YOLOv8 pose, OpenCV",
-        "AI Basketball Coach"
-      ],
-      [
-        "Testing and delivery",
-        "pytest, Node test runner, GitHub Actions, Docker, Render",
-        "MaintAgent, clinic chatbot, Kocaeli Factory Intelligence"
-      ],
-      [
-        "Still learning",
-        "LoRA (PEFT), FAISS, Sentence-Transformers",
-        "Sports LLM notebook"
-      ]
+    "heading": "Skills",
+    "groups": [
+      {
+        "title": "AI",
+        "items": [
+          "LLM applications",
+          "Prompt engineering",
+          "RAG",
+          "LightGBM",
+          "scikit-learn",
+          "PyTorch",
+          "PyTorch Geometric",
+          "Hugging Face"
+        ]
+      },
+      {
+        "title": "Data",
+        "items": [
+          "Python",
+          "SQL",
+          "DuckDB",
+          "pandas",
+          "NumPy"
+        ]
+      },
+      {
+        "title": "Backend",
+        "items": [
+          "FastAPI",
+          "REST APIs",
+          "Node.js",
+          "Docker"
+        ]
+      },
+      {
+        "title": "Frontend",
+        "items": [
+          "TypeScript",
+          "React",
+          "Next.js",
+          "Tailwind CSS"
+        ]
+      },
+      {
+        "title": "Tools",
+        "items": [
+          "Git",
+          "GitHub Actions",
+          "pytest",
+          "Render"
+        ]
+      }
     ]
   },
   "contact": {
-    "heading": "Contact",
-    "text": "I'm looking for a junior AI engineer or Python backend role in Kocaeli, on Istanbul's Anatolian side, in Ankara, Bursa or İzmir if I relocate, or remote. Email is the fastest way to reach me.",
+    "heading": "Let's work together",
+    "text": "I'm open to AI engineer and Python backend roles in Kocaeli, on Istanbul's Anatolian side, in Ankara, Bursa or İzmir if I relocate, or remote. Email is the fastest way to reach me.",
     "email": "btaykuthindal@gmail.com",
     "copy": "Copy address",
     "copied": "Copied",
@@ -502,11 +341,6 @@
     "linkedin": "LinkedIn"
   },
   "footer": {
-    "note": "Plain HTML, CSS and JavaScript, generated from two JSON files by a small Python script.",
     "source": "Site source"
-  },
-  "ui": {
-    "skip": "Skip to content",
-    "menu": "Sections"
   }
 }

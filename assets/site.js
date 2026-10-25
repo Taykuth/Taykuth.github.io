@@ -7,7 +7,6 @@
   if (canvas && canvas.getContext) {
     var ctx = canvas.getContext("2d");
     var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-    var dark = window.matchMedia("(prefers-color-scheme: dark)");
     var POINTS = 480;          // 48 hours at 6-minute intervals
     var Y_MAX = 8;             // mm/s
     var THRESHOLD = 4.5;       // mm/s
@@ -60,79 +59,69 @@
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.clearRect(0, 0, w, h);
 
-      var ink = css("--ink"), steel = css("--steel"), grid = css("--grid"),
-          petrol = css("--petrol"), signal = css("--signal");
-      var font = '500 12px "Archivo Variable", Archivo, Arial, sans-serif';
-      var padL = w < 520 ? 34 : 48, padR = w < 520 ? 14 : 28, padT = 18, padB = 26;
+      var red = css("--red") || "#ff2340", muted = css("--muted") || "#a69c9e";
+      var padL = 0, padR = 0, padT = 16, padB = 12;
       var pw = w - padL - padR, ph = h - padT - padB;
       var X = function (i) { return padL + (i / (POINTS - 1)) * pw; };
       var Y = function (v) { return padT + ph - (v / Y_MAX) * ph; };
 
-      // Chart paper: hour lines every 6 h, value lines every 2 mm/s
+      // Faint chart paper
       ctx.lineWidth = 1;
-      ctx.strokeStyle = grid;
+      ctx.strokeStyle = "rgba(255,255,255,0.045)";
       ctx.beginPath();
-      for (var g = 0; g <= 8; g++) {
-        var gx = Math.round(padL + (g / 8) * pw) + 0.5;
-        ctx.moveTo(gx, padT); ctx.lineTo(gx, padT + ph);
-      }
-      for (var v = 0; v <= Y_MAX; v += 2) {
-        var gy = Math.round(Y(v)) + 0.5;
-        ctx.moveTo(padL, gy); ctx.lineTo(padL + pw, gy);
-      }
+      var cols = Math.max(6, Math.round(w / 90));
+      for (var g = 1; g < cols; g++) { var gx = Math.round((g / cols) * w) + 0.5; ctx.moveTo(gx, 0); ctx.lineTo(gx, h); }
+      for (var v = 2; v < Y_MAX; v += 2) { var gy = Math.round(Y(v)) + 0.5; ctx.moveTo(0, gy); ctx.lineTo(w, gy); }
       ctx.stroke();
 
-      // Axis labels
-      ctx.font = font;
-      ctx.fillStyle = steel;
-      ctx.textBaseline = "middle";
-      ctx.textAlign = "right";
-      for (var t = 0; t <= Y_MAX; t += 2) ctx.fillText(String(t), padL - 8, Y(t));
-      ctx.textBaseline = "alphabetic";
+      var gutter = Math.max(20, (w - Math.min(w, 1200)) / 2 + 20);
+      ctx.font = '600 12px "Archivo Variable", Archivo, Arial, sans-serif';
+      ctx.fillStyle = muted;
       ctx.textAlign = "left";
-      ctx.fillText(canvas.dataset.yLabel || "", padL + 6, padT + 12);
-      var hours = canvas.dataset.hours || "h";
-      ctx.textAlign = "left";
-      ctx.fillText("−48 " + hours, padL, h - 7);
-      ctx.textAlign = "center";
-      ctx.fillText("−24 " + hours, padL + pw / 2, h - 7);
-      ctx.textAlign = "right";
-      ctx.fillText(canvas.dataset.now || "now", padL + pw, h - 7);
+      ctx.fillText(canvas.dataset.yLabel || "", gutter, padT + 4);
 
       // Threshold
       var ty = Math.round(Y(THRESHOLD)) + 0.5;
-      ctx.strokeStyle = signal;
-      ctx.setLineDash([6, 5]);
-      ctx.lineWidth = 1.5;
-      ctx.beginPath(); ctx.moveTo(padL, ty); ctx.lineTo(padL + pw, ty); ctx.stroke();
+      ctx.strokeStyle = "rgba(255,35,64,0.55)";
+      ctx.setLineDash([5, 6]);
+      ctx.beginPath(); ctx.moveTo(0, ty); ctx.lineTo(w, ty); ctx.stroke();
       ctx.setLineDash([]);
-      ctx.fillStyle = signal;
-      ctx.textAlign = "left";
-      ctx.font = '600 12px "Archivo Variable", Archivo, Arial, sans-serif';
-      ctx.fillText((canvas.dataset.threshold || "") + "  " + String(THRESHOLD).replace(".", document.documentElement.lang === "tr" ? "," : "."), padL + 6, ty - 7);
+      ctx.fillStyle = red;
+      ctx.fillText(canvas.dataset.threshold || "", gutter, ty - 8);
 
-      // Trace up to the current progress
+      // Trace: quiet before the alert, neon after it
       var last = Math.max(1, Math.floor(progress * (POINTS - 1)));
+      var split = crossing > 0 ? Math.min(last, crossing) : last;
       ctx.lineJoin = "round";
-      ctx.lineWidth = 1.75;
-      ctx.strokeStyle = petrol;
+      ctx.lineWidth = 1.6;
+      ctx.strokeStyle = "rgba(244,239,240,0.55)";
       ctx.beginPath();
-      for (var i = 0; i <= last; i++) {
-        var px = X(i), py = Y(data[i]);
-        if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
-        if (crossing > 0 && i === crossing) { ctx.stroke(); ctx.strokeStyle = ink; ctx.beginPath(); ctx.moveTo(px, py); }
-      }
+      for (var i = 0; i <= split; i++) { if (i === 0) ctx.moveTo(X(i), Y(data[i])); else ctx.lineTo(X(i), Y(data[i])); }
       ctx.stroke();
+      if (crossing > 0 && last > crossing) {
+        ctx.save();
+        ctx.strokeStyle = red;
+        ctx.lineWidth = 2.2;
+        ctx.shadowColor = red;
+        ctx.shadowBlur = 14;
+        ctx.beginPath();
+        for (var j = crossing; j <= last; j++) { if (j === crossing) ctx.moveTo(X(j), Y(data[j])); else ctx.lineTo(X(j), Y(data[j])); }
+        ctx.stroke();
+        ctx.restore();
+      }
 
-      // Alert marker once the trace has crossed the threshold
+      // Alert marker
       if (crossing > 0 && last >= crossing) {
         var cx = X(crossing), cy = Y(THRESHOLD);
-        ctx.fillStyle = signal;
-        ctx.beginPath();
-        ctx.moveTo(cx, cy - 7); ctx.lineTo(cx + 7, cy); ctx.lineTo(cx, cy + 7); ctx.lineTo(cx - 7, cy);
-        ctx.closePath(); ctx.fill();
-        ctx.strokeStyle = ink; ctx.lineWidth = 1;
-        ctx.beginPath(); ctx.moveTo(Math.round(cx) + 0.5, cy + 8); ctx.lineTo(Math.round(cx) + 0.5, padT + ph); ctx.stroke();
+        ctx.save();
+        ctx.fillStyle = red;
+        ctx.shadowColor = red;
+        ctx.shadowBlur = 18;
+        ctx.beginPath(); ctx.arc(cx, cy, 5, 0, Math.PI * 2); ctx.fill();
+        ctx.restore();
+        ctx.strokeStyle = "rgba(255,35,64,0.45)";
+        ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.arc(cx, cy, 11, 0, Math.PI * 2); ctx.stroke();
       }
     }
 
@@ -159,8 +148,6 @@
 
     if (window.ResizeObserver) new ResizeObserver(function () { draw(); }).observe(canvas);
     else window.addEventListener("resize", draw);
-    var onScheme = function () { draw(); };
-    if (dark.addEventListener) dark.addEventListener("change", onScheme); else if (dark.addListener) dark.addListener(onScheme);
   }
 
   /* ---------- Copy e-mail ---------- */

@@ -75,7 +75,8 @@ The two pages are generated, so edit the JSON, not the HTML:
 python tools/build.py
 ~~~
 
-- Projects, metrics and limits live under `work.projects` in each JSON file; keep the two languages in step.
+- The about section is under `about`, featured projects under `work.projects` and smaller ones under `more`; keep the two languages in step.
 - The CV buttons point to `assets/cv/Bora_Taykut_Hindal_CV_EN.pdf` and `..._TR.pdf`. Replace those files to update the CV. The public copies leave out the phone number.
+- The portrait (`assets/img/portrait-*.webp`) has a transparent background so the red backlight shows behind it.
 - English is served at `/`, Turkish at `/tr/`. A browser set to Turkish is sent to `/tr/` once, unless the visitor has picked a language with the switch.
-- Fonts (Archivo, Source Serif 4) are self-hosted under `assets/fonts/` under the SIL Open Font License, so the site makes no third-party requests.
+- The only font, Archivo, is self-hosted under `assets/fonts/` (SIL Open Font License), so the site makes no third-party requests.

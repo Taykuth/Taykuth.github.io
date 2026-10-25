@@ -6,114 +6,113 @@
   "alt_label": "English",
   "meta": {
     "title": "Bora Taykut Hindal, yapay zeka mühendisi",
-    "description": "Gebze, Kocaeli'de yapay zeka mühendisi. Kestirimci bakım, LLM veri hatları ve graf sinir ağları; her proje ölçümü ve sınırlarıyla.",
+    "description": "Kocaeli'de yapay zeka mühendisi. Kestirimci bakım, LLM otomasyonu ve uçtan uca yapay zeka ürünleri.",
     "og_locale": "tr_TR"
   },
+  "ui": {
+    "skip": "İçeriğe geç",
+    "menu": "Bölümler"
+  },
   "nav": {
+    "about": "Hakkımda",
     "work": "Projeler",
-    "experience": "Deneyim",
     "skills": "Yetkinlikler",
     "contact": "İletişim",
     "cv": "CV"
   },
   "hero": {
-    "role": "Yapay zeka mühendisi, Gebze, Kocaeli",
-    "statement": "Veriyi, insanların uygulayabileceği kararlara çeviriyorum: sensör okumasından bakım kararına, ürün kataloğundan bir insanın onayladığı içeriğe. Bu sayfadaki her proje nasıl ölçüldüğünü ve nerede yetersiz kaldığını söylüyor.",
-    "cv": "CV'yi indir (PDF)",
+    "role": "Yapay zeka mühendisi, Kocaeli",
+    "statement": "Makine öğrenmesi modellerini ve büyük dil modellerini, insanların gerçekten kullanabileceği araçlara dönüştürüyorum.",
+    "sub": "Kestirimci bakım, LLM otomasyonu ve uçtan uca yapay zeka ürünleri.",
+    "cta_work": "Projeleri gör",
+    "cv": "CV'yi indir",
     "cv_href": "/assets/cv/Bora_Taykut_Hindal_CV_TR.pdf",
     "cv_alt": "İngilizce CV",
     "cv_alt_href": "/assets/cv/Bora_Taykut_Hindal_CV_EN.pdf",
-    "portrait_alt": "Bora Taykut Hindal'ın portresi"
+    "portrait_alt": "Bora Taykut Hindal"
   },
   "signal": {
-    "y_label": "titreşim, mm/s",
-    "x_label": "son 48 saat",
+    "y_label": "titreşim",
     "threshold": "alarm eşiği",
-    "caption": "Alarm eşiğini aşan sentetik bir titreşim sinyali. Kestirimci bakım demom aynısını arkasında bir modelle yapıyor.",
-    "link": "Canlı demoyu aç",
-    "href": "/kocaeli-factory-intelligence/",
-    "now": "şimdi",
-    "hours": "sa"
+    "caption": "Alarm eşiğini aşan bir titreşim sinyali (sentetik). Benzerini kestirimci bakım demomda canlı görebilirsin.",
+    "link": "Demoyu aç",
+    "href": "/kocaeli-factory-intelligence/"
+  },
+  "about": {
+    "heading": "Hakkımda",
+    "paragraphs": [
+      "Kocaeli'de yaşayan bir yapay zeka mühendisiyim. Bir işi uçtan uca yapmayı seviyorum: veriyi hazırlıyorum, modeli eğitiyorum, bir API ile sunuyorum ve insanların kullandığı ekranı geliştiriyorum.",
+      "Üç stajda veri, makine öğrenmesi ve e-ticaret ekiplerinde çalıştım. Son stajımda Trendyol'daki marka katalogları için ürün açıklamalarını yapay zekayla yazan ve her birini bir insanın onayından geçiren sistemi kurdum. Bugünlerde en çok üretim tesisleri için kestirimci bakım ve büyük dil modelleriyle çalışan asistanlar üzerine çalışıyorum."
+    ],
+    "focus_heading": "Neler üzerinde çalışıyorum",
+    "focus": [
+      {
+        "title": "LLM uygulamaları",
+        "text": "İçerik üretimi, müşteri hizmetleri botları ve araç kullanan asistanlar. Modelin çıktısını kurallarla denetleyip son kararı insana bırakıyorum."
+      },
+      {
+        "title": "Kestirimci bakım",
+        "text": "Makine sensör verisinden arızayı önceden haber veren modeller ve bakım ekibinin bir bakışta anlayacağı ekranlar."
+      },
+      {
+        "title": "Makine öğrenmesi",
+        "text": "LightGBM, scikit-learn, PyTorch ve graf sinir ağlarıyla sınıflandırma, tahmin ve anomali tespiti."
+      },
+      {
+        "title": "Uçtan uca ürün",
+        "text": "Python ve FastAPI ile backend, React ve Next.js ile arayüz; Docker ve GitHub Actions ile yayına alma."
+      }
+    ],
+    "facts": [
+      {
+        "k": "Konum",
+        "v": "Kocaeli"
+      },
+      {
+        "k": "Eğitim",
+        "v": "Yapay Zeka Mühendisliği, OSTİM Teknik Üniversitesi"
+      },
+      {
+        "k": "Deneyim",
+        "v": "Skywalker.tc, İsTeknolojileri ve Mavinci'de üç staj"
+      },
+      {
+        "k": "Diller",
+        "v": "Türkçe, İngilizce (B2)"
+      }
+    ]
   },
   "work": {
-    "heading": "Projeler",
-    "lede": "Beş proje, en yeniden eskiye. İlki hâlâ yapım aşamasında.",
-    "labels": {
-      "built": "Ne yaptım",
-      "measured": "Ölçüm",
-      "limit": "Nerede yetersiz",
-      "stack": "Teknolojiler",
-      "pipeline": "Akış",
-      "planned": "planlı"
-    },
+    "heading": "Öne çıkan projeler",
+    "lede": "Açık veri setleriyle eğitilmiş modeller, canlı bir demo ve gerçek bir müşterinin kataloğunda çalışmış bir sistem.",
+    "code": "GitHub'da kod",
     "projects": [
       {
         "id": "maintagent",
-        "featured": true,
-        "status": "Geliştiriliyor, Ekim 2026",
-        "kind": "progress",
+        "tag": "Yeni",
         "title": "MaintAgent",
-        "oneliner": "Endüstriyel makineler için bir bakım ajanı: sensör verisiyle eğitilmiş bir arıza riski modeli ve arızaları araçlarla inceleyip bir insanın onayına iş emri taslağı hazırlayacak bir LLM ajanı.",
-        "pipeline": [
+        "text": "Endüstriyel makineler için yapay zeka bakım asistanı. Sensör verisinden önümüzdeki 24 saatte arıza riskini ve arızalanması muhtemel parçayı tahmin ediyor, her tahminin hangi sinyallerden geldiğini gösteriyor. Sıradaki adım, arızayı araçlarla inceleyip iş emri taslağı hazırlayan LLM asistanı.",
+        "points": [
+          "Microsoft Azure Predictive Maintenance verisi, DuckDB üzerinde SQL ile işleniyor",
+          "Çok sınıflı LightGBM modeli: risk ve muhtemel parça",
+          "13 otomatik test, modelin geleceği görmediğini kontrol eden test dahil"
+        ],
+        "stats": [
           {
-            "label": "Azure PdM CSV dosyaları"
+            "v": "24 sa",
+            "k": "önceden arıza riski"
           },
           {
-            "label": "DuckDB"
-          },
-          {
-            "label": "Yalnızca son 24 saatten SQL özellikleri"
-          },
-          {
-            "label": "LightGBM: risk ve olası bileşen"
-          },
-          {
-            "label": "Özellik katkıları"
-          },
-          {
-            "label": "Araçlı ajan",
-            "planned": true
-          },
-          {
-            "label": "İş emri, insan onayı",
-            "planned": true
+            "v": "13",
+            "k": "otomatik test"
           }
         ],
-        "built": [
-          "Microsoft Azure Predictive Maintenance veri setinin beş CSV dosyasını DuckDB'ye yükleyen, iki tarih biçimini kabul eden ve okunamayan tek bir satırda bile duran bir yükleyici.",
-          "Tüm özellikler tek bir SQL sorgusunda: 3 ve 24 saatlik sensör istatistikleri, hata sayıları, her bileşenin değişiminden bu yana geçen gün (ASOF join), makine modeli ve yaşı.",
-          "Önümüzdeki 24 saatte arıza riskini ve arızalanma ihtimali en yüksek bileşeni veren, her tahmin için özellik katkılarını gösteren çok sınıflı bir LightGBM modeli.",
-          "Modelin geçmesi gereken taban çizgisi olarak bir z-skoru kuralı; çalışma metriği olarak %80 kesinlikteki duyarlılık (recall).",
-          "Yapılandırmada sabit bir 'şimdi' (AS_OF): ajanın araçları, akıl yürüttükleri andan sonraki veriyi görmeyecek. Araç çağırma Groq'un OpenAI uyumlu API'sinde test edildi."
-        ],
-        "decision": {
-          "title": "Fazla iyi bir skor",
-          "text": "Gerçek veri setindeki ilk çalıştırma PR-AUC 0,999 verdi. Bakım verisinde bu genellikle iyi bir model değil, veri sızıntısı ya da veri setindeki yapay bir desen demektir. Skoru neyin taşıdığını bulmak için modeli ayrı özellik gruplarıyla ve 0-24, 24-48, 48-72 saatlik ufuklarla yeniden eğiten bir ablasyon yazdım. Bir özellik tahmin anından sonraki veriyi okursa düşen bir test de var."
-        },
-        "metrics": [
-          {
-            "k": "Testler",
-            "v": "13 test geçiyor (pytest)"
-          },
-          {
-            "k": "Bölme",
-            "v": "Zamana göre: eğitim Oca–Tem 2015, test Ağu–Ara 2015, bir gün ara"
-          },
-          {
-            "k": "Model metrikleri",
-            "v": "Ablasyon 0,999'u açıklayana kadar yayımlanmıyor"
-          }
-        ],
-        "metrics_note": "",
-        "limit": "Ajan, araçları ve iş emri onay döngüsü henüz yok. Model yalnızca tek bir açık veri setinde değerlendirildi.",
-        "stack": [
+        "tags": [
           "Python",
+          "LightGBM",
           "DuckDB",
           "SQL",
-          "LightGBM",
-          "scikit-learn",
-          "pytest",
-          "Groq API"
+          "pytest"
         ],
         "links": [
           {
@@ -124,74 +123,31 @@
       },
       {
         "id": "kfi",
-        "status": "Canlı demo",
-        "kind": "live",
+        "tag": "Canlı demo",
         "title": "Kocaeli Factory Intelligence",
-        "oneliner": "Üretim hatları için kestirimci bakım prototipi. Telemetri girer; 24 saatlik arıza riski, anomali skoru, bunun arkasındaki sinyaller ve ilk bakım aksiyonu çıkar.",
-        "pipeline": [
-          {
-            "label": "Deterministik telemetri"
-          },
-          {
-            "label": "Özellik doğrulama"
-          },
-          {
-            "label": "z-skoru anomali ve lojistik regresyon"
-          },
-          {
-            "label": "JSON model dosyaları"
-          },
-          {
-            "label": "Tarayıcıda dashboard"
-          }
+        "text": "Üretim hatları için kestirimci bakım paneli. Makine telemetrisinden 24 saatlik arıza riskini, anomali skorunu ve vardiyanın atması gereken ilk bakım adımını çıkarıyor. Model doğrudan tarayıcıda çalışıyor.",
+        "points": [
+          "8 makine ve 4.608 sentetik ölçümle eğitildi",
+          "Zamana göre ayrılmış testte %66 kesinlik, %53 duyarlılık",
+          "Senaryo alarmı ile model tahmini ekranda ayrı gösteriliyor"
         ],
-        "built": [
-          "Deterministik bir telemetri üreticisi: 8 makine, 15 dakika aralıklı 4.608 ölçüm ve altı günde 24 arıza olayı.",
-          "Çok değişkenli z-skoru anomali skoru ve gradyan inişiyle eğitilmiş sınıf ağırlıklı lojistik regresyon; ikisi de saf JavaScript.",
-          "Modeli JSON dosyalarından tarayıcıda çalıştıran bir dashboard ve aynı modeli sunan isteğe bağlı bir Node.js HTTP API'si.",
-          "Senaryo etiketini model çıktısından ayrı tutan bir ekran; senaryo alarmı tahmin gibi okunamıyor.",
-          "Node'un test çalıştırıcısı ve her değişiklikte veriyi yeniden üretip modeli yeniden eğitip test eden bir GitHub Actions iş akışı."
-        ],
-        "decision": {
-          "title": "Zamana göre böl, yanlış alarmı raporla",
-          "text": "Art arda gelen telemetri satırları neredeyse aynıdır; rastgele bölme geleceği eğitime sızdırır. Veriyi zamana göre böldüm, %75 eğitim ve %25 test. Duyarlılığın yanında yanlış alarm oranını da raporluyorum, çünkü bakım ekibi her yanlış çağrının bedelini öder."
+        "image": {
+          "src": "/assets/img/kfi.webp",
+          "alt": "Kocaeli Factory Intelligence panelinde makinelerin risk ve anomali görünümü",
+          "w": 1280,
+          "h": 800
         },
-        "metrics": [
-          {
-            "k": "Kesinlik (precision)",
-            "v": "%65,8"
-          },
-          {
-            "k": "Duyarlılık (recall)",
-            "v": "%52,9"
-          },
-          {
-            "k": "F1",
-            "v": "%58,7"
-          },
-          {
-            "k": "Yanlış alarm oranı",
-            "v": "%19,4"
-          }
-        ],
-        "metrics_note": "Sentetik veride, zamana göre %75/%25 ayrılmış test seti.",
-        "limit": "Veri sentetik; bunlar bir fabrikadan alınmış sonuçlar değil. Gerçek bir pilot için tarihçi (historian) ya da SCADA telemetrisinin bakım kayıtlarıyla birleştirilmesi ve arıza etiketlerinin bakım ekibiyle birlikte belirlenmesi gerekir.",
-        "stack": [
-          "JavaScript (ES modülleri)",
+        "tags": [
+          "JavaScript",
           "Node.js",
           "GitHub Actions",
           "Docker"
         ],
-        "image": {
-          "src": "/assets/img/kfi.webp",
-          "alt": "Kocaeli Factory Intelligence dashboard'u: her makine için risk, anomali skoru ve bakım aksiyonları",
-          "w": 1280,
-          "h": 800
-        },
         "links": [
           {
-            "label": "Canlı demoyu aç",
-            "href": "/kocaeli-factory-intelligence/"
+            "label": "Demoyu aç",
+            "href": "/kocaeli-factory-intelligence/",
+            "primary": true
           },
           {
             "label": "GitHub'da kod",
@@ -201,65 +157,29 @@
       },
       {
         "id": "trendyol",
-        "status": "Staj, Skywalker.tc, 2026",
-        "kind": "internship",
-        "title": "Trendyol SEO açıklama hattı",
-        "oneliner": "Bir markanın kataloğunu Trendyol Seller API'den çeken, her ürün için OpenAI ile yeni bir SEO açıklaması yazan, her birini pazaryeri kurallarına göre kontrol eden ve sonucu bir insana teslim eden Python veri hattı. Hiçbir şey otomatik yayımlanmıyor.",
-        "pipeline": [
+        "tag": "Staj projesi, Skywalker.tc",
+        "title": "Trendyol SEO açıklama sistemi",
+        "text": "Trendyol Seller API'den ürünleri çekip OpenAI ile SEO uyumlu açıklamalar yazan Python sistemi. Her açıklama pazaryeri kurallarına göre denetleniyor; kuralı ihlal eden yeniden yazılıyor ve hepsi yayından önce bir insanın onayına gidiyor.",
+        "points": [
+          "Yasaklı ifade, HTML ve uzunluk kontrolleri, en fazla iki yeniden deneme",
+          "Orijinal ve yeni açıklamayı yan yana koyan inceleme tablosu",
+          "Aynı stajda yapay zeka görselleri için Next.js inceleme ekranı"
+        ],
+        "stats": [
           {
-            "label": "Trendyol Seller API"
+            "v": "40 → 118",
+            "k": "ortalama kelime"
           },
           {
-            "label": "Çekme ve normalleştirme"
-          },
-          {
-            "label": "gpt-4.1-mini"
-          },
-          {
-            "label": "Kural kontrolü, en fazla 2 yeniden deneme"
-          },
-          {
-            "label": "İnceleme tablosu"
-          },
-          {
-            "label": "İnsan onayı"
+            "v": "36/36",
+            "k": "kural kontrolünden geçen ürün"
           }
         ],
-        "built": [
-          "Kataloğun çekilip çalışma tablosuna normalleştirilmesi; yeniden deneme ve istek limiti yönetimiyle.",
-          "Her çıktıda kural kontrolü: boş metin, HTML, 'en iyi', 'garanti', 'tedavi' gibi on yasaklı ifade ve 100 kelimeden kısa metin. Kontrolden geçemeyen açıklama en fazla iki kez daha üretiliyor, yine geçemezse inceleyen görsün diye FAIL olarak kalıyor.",
-          "Orijinal açıklamayı yenisinin ve durumunun yanına koyan bir inceleme tablosu.",
-          "Uzun ürün sayfaları için her üretimi sürüm numarası ve JSON doğrulama raporuyla SQLite'ta saklayan ikinci bir mod."
-        ],
-        "decision": {
-          "title": "Son sözü insan verir",
-          "text": "Pazaryeri kuralları abartılı ve tıbbi iddiaları cezalandırır; bir dil modeli de zaman zaman bu iddiaları yazar. Otomatik kontroller bariz hataları yakalar; yayımlama kararı insanda kalır. Bu yüzden hat bir yüklemeyle değil, inceleme tablosuyla bitiyor."
-        },
-        "metrics": [
-          {
-            "k": "Ürün",
-            "v": "36, tek marka kataloğu"
-          },
-          {
-            "k": "Kural kontrolünden geçen",
-            "v": "36'da 36"
-          },
-          {
-            "k": "Ortalama uzunluk",
-            "v": "40 → 118 kelime"
-          },
-          {
-            "k": "Ham HTML olan orijinal",
-            "v": "5"
-          }
-        ],
-        "metrics_note": "Üretilen açıklamalar 101 ile 138 kelime arasında.",
-        "limit": "Kontroller otomatik; açıklamanın yeterince iyi olup olmadığına bir insan karar verdi ve bunun ötesinde bir kalite skoru yok. Müşteri verisi depoda yok.",
-        "stack": [
+        "tags": [
           "Python",
           "OpenAI API",
+          "Trendyol Seller API",
           "pandas",
-          "openpyxl",
           "SQLite"
         ],
         "links": [
@@ -271,57 +191,25 @@
       },
       {
         "id": "neobioai",
-        "status": "Bitirme tezi, 2026",
-        "kind": "thesis",
+        "tag": "Bitirme tezi",
         "title": "NeoBioAI",
-        "oneliner": "Bir molekülün yapısından bağlanma afinitesini (pKd) graf sinir ağıyla tahmin ediyor; FastAPI ve tahmini hangi atomların belirlediğini gösteren bir Next.js arayüzüyle sunuluyor.",
-        "pipeline": [
+        "text": "Bir molekülün yapısından bağlanma afinitesini tahmin eden graf sinir ağı. FastAPI ile sunuluyor; Next.js arayüzü tahmini hangi atomların etkilediğini gösteriyor, toplu CSV tahmini yapıyor ve LLM ile özet rapor yazıyor.",
+        "points": [
+          "PDBBind veri setiyle eğitilmiş GINEConv ağı",
+          "Atom düzeyinde açıklama",
+          "Tek CPU iş parçacığında hızlı tahmin"
+        ],
+        "stats": [
           {
-            "label": "SMILES dizisi"
+            "v": "3,8 ms",
+            "k": "molekül başına tahmin"
           },
           {
-            "label": "Atom-bağ grafı (RDKit)"
-          },
-          {
-            "label": "GINEConv ağı"
-          },
-          {
-            "label": "pKd ve atom açıklamaları"
-          },
-          {
-            "label": "FastAPI ve Next.js"
+            "v": "0,63",
+            "k": "test setinde Pearson r"
           }
         ],
-        "built": [
-          "Bağ özellikli moleküler graflar üzerinde 4 katmanlı, 340.481 parametreli, erken durdurmayla eğitilmiş bir GINEConv ağı.",
-          "Tekli ve toplu CSV tahmini yapan bir FastAPI backend'i ve tahminin arkasındaki atomları vurgulayan bir Next.js arayüzü.",
-          "Her toplu tahmin için LLM'in yazdığı bir özet rapor."
-        ],
-        "decision": {
-          "title": "Modelin neyi görmediğini yaz",
-          "text": "Model yalnızca ligandı görüyor, proteini görmüyor; hedef ne olursa olsun molekül başına tek bir değer tahmin ediyor. Önceki README modeli docking ile karşılaştırıyordu; ikisi farklı işler yaptığı için o karşılaştırmayı kaldırdım."
-        },
-        "metrics": [
-          {
-            "k": "Test RMSE",
-            "v": "1,563 pKd"
-          },
-          {
-            "k": "Test Pearson r",
-            "v": "0,632"
-          },
-          {
-            "k": "Çıkarım",
-            "v": "Molekül başına 3,8 ms, tek CPU çekirdeği"
-          },
-          {
-            "k": "Eğitim",
-            "v": "CPU'da 97 sn"
-          }
-        ],
-        "metrics_note": "PDBBind v2020'den 2.000 komplekslik alt küme, rastgele %80/%10/%10 bölme.",
-        "limit": "Protein girdisi yok ve veri seti küçük: doğrulama hatası 17. epoch'tan sonra artmaya başlıyor.",
-        "stack": [
+        "tags": [
           "PyTorch Geometric",
           "RDKit",
           "FastAPI",
@@ -333,83 +221,29 @@
             "href": "https://github.com/Taykuth/NeoBioAI"
           }
         ]
-      },
-      {
-        "id": "clinic",
-        "status": "Kişisel proje",
-        "kind": "project",
-        "title": "Klinik yapay zeka chatbot'u",
-        "oneliner": "Diş ve estetik klinikleri için Türkçe müşteri hizmetleri chatbot'u. Hizmet, fiyat ve çalışma saatlerine dair soruları kliniğin kendi profilinden yanıtlıyor, asla teşhis koymuyor ve randevu taleplerini WhatsApp'a yönlendiriyor.",
-        "pipeline": [
-          {
-            "label": "Tarayıcıda sohbet"
-          },
-          {
-            "label": "FastAPI /chat"
-          },
-          {
-            "label": "Girdi kontrolleri"
-          },
-          {
-            "label": "Klinik profilinden sistem istemi"
-          },
-          {
-            "label": "gpt-4o-mini"
-          }
-        ],
-        "built": [
-          "JSON'daki klinik profilinden kurulan bir sistem istemi; yeni bir klinik yeni bir dosya demek, yeni kod değil.",
-          "Tarayıcının gönderdiği geçmişe güvenmeyen bir sunucu: istemciden gelen sistem mesajları atılıyor, 1.000 karakteri aşan mesajlar reddediliyor ve her IP dakikada 20 mesaj gönderebiliyor.",
-          "Hatalar sunucuda kayda geçiyor, hasta sade bir mesaj görüyor."
-        ],
-        "decision": {
-          "title": "Tarayıcıya güvenme",
-          "text": "Sohbet tarayıcıda tutuluyor, yani herkes onu değiştirebilir. Yalnızca kullanıcı ve asistan mesajlarını tutmak, bir ziyaretçinin geliştirici konsolundan kliniğin kurallarını yeniden yazmasını engelliyor."
-        },
-        "metrics": [
-          {
-            "k": "Testler",
-            "v": "7 test geçiyor, sahte OpenAI istemcisiyle"
-          },
-          {
-            "k": "Yanıt kalitesi",
-            "v": "Henüz ölçülmedi"
-          }
-        ],
-        "metrics_note": "",
-        "limit": "Testler girdi işlemeyi kapsıyor, yanıt kalitesini değil. Henüz hasta sorularından oluşan bir değerlendirme seti yok.",
-        "stack": [
-          "FastAPI",
-          "OpenAI gpt-4o-mini",
-          "pytest",
-          "Render"
-        ],
-        "links": [
-          {
-            "label": "GitHub'da kod",
-            "href": "https://github.com/Taykuth/ClinicChatBotAi"
-          }
-        ]
       }
     ]
   },
-  "also": {
-    "heading": "Daha küçük işler",
+  "more": {
+    "heading": "Diğer projeler",
     "items": [
       {
+        "title": "Klinik yapay zeka asistanı",
+        "text": "Diş ve estetik klinikleri için Türkçe sohbet botu. Fiyat ve hizmet sorularını kliniğin profilinden yanıtlıyor, teşhis koymuyor, randevuyu WhatsApp'a yönlendiriyor.",
+        "tags": "FastAPI, gpt-4o-mini, pytest",
+        "href": "https://github.com/Taykuth/ClinicChatBotAi"
+      },
+      {
         "title": "AI Basketball Coach",
-        "text": "YOLOv8 poz modeli ve bir top tespit modeliyle videodan top sürme ve adım sayıyor, olası bir yürüme ihlalini işaretliyor. Arkadaşım Osman'la birlikte yaptık; doğruluğu henüz ölçülmedi.",
+        "text": "Videodan top sürme ve adım sayan, olası yürüme ihlalini işaretleyen bilgisayarlı görü prototipi. Arkadaşım Osman'la birlikte.",
+        "tags": "YOLOv8, OpenCV, Python",
         "href": "https://github.com/Taykuth/ai-basketball-coach"
       },
       {
         "title": "VisionGuard AI",
-        "text": "TanStack Start, React 19 ve Convex gerçek zamanlı backend'i üzerine kurulu, simüle tespitlerle çalışan uçtan uca bir kalite kontrol dashboard demosu. Bir arayüz demosu, çıkarım hattı değil.",
+        "text": "Üretim hatları için kalite kontrol ve iş güvenliği izleme panelinin arayüz demosu; simüle tespitler ve gerçek zamanlı backend ile.",
+        "tags": "React, TanStack Start, Convex",
         "href": "https://github.com/Taykuth/visionguard-ai"
-      },
-      {
-        "title": "Spor LLM not defteri",
-        "text": "Türkçe basketbol terimleri üzerinde LoRA ince ayarı ve FAISS ile erişim; öğrenme amaçlı. Yazı, erişimin neden yanlış belgeleri getirdiğini açıklıyor: Türkçe sorularda İngilizce bir embedding modeli.",
-        "href": "https://github.com/Taykuth/sports-llm-rag"
       }
     ]
   },
@@ -417,84 +251,89 @@
     "heading": "Deneyim",
     "items": [
       {
-        "when": "Oca–Tem 2026",
+        "when": "2026",
         "org": "Skywalker.tc",
         "role": "SEO stajyeri (LLM otomasyonu)",
-        "text": "Yukarıdaki Trendyol açıklama hattını ve 10 kişilik ekibimin yapay zekayla üretilen ürün görselleri için kullandığı Next.js ve TypeScript inceleme ekranını geliştirdim: yan yana varyantlar, yakınlaştırma, onay, red, yeniden üretim ve toplu ZIP indirme."
+        "text": "Trendyol açıklama sistemini kurdum; 10 kişilik bir ekipte yapay zeka görselleri için Next.js inceleme ekranını geliştirdim."
       },
       {
-        "when": "Oca–May 2025",
+        "when": "2025",
         "org": "İsTeknolojileri",
         "role": "Yapay zeka mühendisi stajyeri",
-        "text": "Python ile veri setlerini ön işledim; eğitim, test ve değerlendirme için scikit-learn deneyleri yürüttüm."
+        "text": "Python ile veri setlerini hazırladım, scikit-learn ile model eğitip değerlendirdim."
       },
       {
-        "when": "Oca–May 2024",
+        "when": "2024",
         "org": "Mavinci",
         "role": "Makine öğrenmesi mühendisi stajyeri",
-        "text": "SQL join, filtre ve agregasyonlarla makine öğrenmesi veri setleri hazırladım, pandas ile temizledim."
+        "text": "SQL ve pandas ile makine öğrenmesi veri setleri hazırladım."
       },
       {
-        "when": "2022–2026",
-        "org": "OSTİM Teknik Üniversitesi, Ankara",
-        "role": "Yapay Zeka Mühendisliği, lisans",
-        "text": "Bitirme tezi: NeoBioAI. Sertifikalar: Google AI Essentials, BTK Akademi Makine Öğrenmesi, Hugging Face NLP Kursu. Diller: Türkçe (ana dil), İngilizce (B2)."
+        "when": "Lisans",
+        "org": "OSTİM Teknik Üniversitesi",
+        "role": "Yapay Zeka Mühendisliği",
+        "text": "Bitirme tezi: NeoBioAI. Sertifikalar: Google AI Essentials, BTK Akademi Makine Öğrenmesi, Hugging Face NLP Kursu."
       }
     ]
   },
   "skills": {
-    "heading": "Yetkinlikler ve nerede kullandığım",
-    "cols": [
-      "Alan",
-      "Araçlar",
-      "Nerede"
-    ],
-    "rows": [
-      [
-        "LLM uygulamaları",
-        "OpenAI API, araç çağırma (Groq), istem ve çıktı doğrulama",
-        "Trendyol hattı, klinik chatbot'u, MaintAgent"
-      ],
-      [
-        "Makine öğrenmesi",
-        "LightGBM, scikit-learn, PyTorch, PyTorch Geometric",
-        "MaintAgent, NeoBioAI, stajlar"
-      ],
-      [
-        "Veri",
-        "SQL (DuckDB pencere fonksiyonları, ASOF join), pandas, NumPy",
-        "MaintAgent, Mavinci"
-      ],
-      [
-        "Backend",
-        "Python, FastAPI, Node.js, REST API",
-        "Klinik chatbot'u, NeoBioAI, Kocaeli Factory Intelligence"
-      ],
-      [
-        "Frontend",
-        "TypeScript, React, Next.js",
-        "Skywalker inceleme ekranı, NeoBioAI"
-      ],
-      [
-        "Bilgisayarlı görü",
-        "YOLOv8 poz, OpenCV",
-        "AI Basketball Coach"
-      ],
-      [
-        "Test ve dağıtım",
-        "pytest, Node test çalıştırıcısı, GitHub Actions, Docker, Render",
-        "MaintAgent, klinik chatbot'u, Kocaeli Factory Intelligence"
-      ],
-      [
-        "Hâlâ öğreniyorum",
-        "LoRA (PEFT), FAISS, Sentence-Transformers",
-        "Spor LLM not defteri"
-      ]
+    "heading": "Yetkinlikler",
+    "groups": [
+      {
+        "title": "Yapay zeka",
+        "items": [
+          "LLM uygulamaları",
+          "Prompt mühendisliği",
+          "RAG",
+          "LightGBM",
+          "scikit-learn",
+          "PyTorch",
+          "PyTorch Geometric",
+          "Hugging Face"
+        ]
+      },
+      {
+        "title": "Veri",
+        "items": [
+          "Python",
+          "SQL",
+          "DuckDB",
+          "pandas",
+          "NumPy"
+        ]
+      },
+      {
+        "title": "Backend",
+        "items": [
+          "FastAPI",
+          "REST API",
+          "Node.js",
+          "Docker"
+        ]
+      },
+      {
+        "title": "Frontend",
+        "items": [
+          "TypeScript",
+          "React",
+          "Next.js",
+          "Tailwind CSS"
+        ]
+      },
+      {
+        "title": "Araçlar",
+        "items": [
+          "Git",
+          "GitHub Actions",
+          "pytest",
+          "Render"
+        ]
+      }
     ]
   },
   "contact": {
-    "heading": "İletişim",
-    "text": "Kocaeli'de, İstanbul Anadolu yakasında, taşınarak Ankara, Bursa ya da İzmir'de veya uzaktan; junior yapay zeka mühendisi ya da Python backend rolü arıyorum. Bana en hızlı e-postayla ulaşırsın.",
+    "heading": "Birlikte çalışalım",
+    "text": "Kocaeli'de, İstanbul Anadolu yakasında, taşınarak Ankara, Bursa ya da İzmir'de veya uzaktan; yapay zeka mühendisi ya da Python backend rollerine açığım. Bana en hızlı e-postayla ulaşırsın.",
     "email": "btaykuthindal@gmail.com",
     "copy": "Adresi kopyala",
     "copied": "Kopyalandı",
@@ -502,11 +341,6 @@
     "linkedin": "LinkedIn"
   },
   "footer": {
-    "note": "Düz HTML, CSS ve JavaScript; iki JSON dosyasından küçük bir Python betiğiyle üretiliyor.",
     "source": "Sitenin kaynağı"
-  },
-  "ui": {
-    "skip": "İçeriğe geç",
-    "menu": "Bölümler"
   }
 }

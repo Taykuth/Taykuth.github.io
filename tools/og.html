@@ -2,35 +2,37 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="/assets/fonts/fonts.css">
+<meta name="robots" content="noindex">
 <link rel="stylesheet" href="/assets/site.css">
 <style>
-  html, body { width: 1200px; height: 630px; margin: 0; overflow: hidden; }
-  .og { width: 1200px; height: 630px; display: grid; grid-template-rows: auto 1fr 190px; padding: 56px 64px 0; box-sizing: border-box; }
-  .og .name { font-size: 104px; margin: 0.18em 0 0; }
-  .og .role { font-size: 26px; }
-  .og-foot { display: flex; justify-content: space-between; align-items: end; padding-bottom: 18px; font-family: var(--f-display); font-size: 22px; color: var(--steel); }
-  .og-chart { margin: 0 -64px; height: 190px; background: var(--surface); border-top: 1px solid var(--rule); }
-  .og-chart canvas { width: 100%; height: 100%; display: block; }
+  html, body { width: 1200px; height: 630px; margin: 0; overflow: hidden; background: #000; }
+  .og { position: relative; width: 1200px; height: 630px; overflow: hidden; }
+  .og-text { position: absolute; left: 72px; top: 70px; width: 700px; }
+  .og .name { font-size: 96px; margin: 0.28em 0 0.32em; }
+  .og .role { font-size: 24px; }
+  .og-tag { font-size: 28px; color: var(--muted); max-width: 22em; line-height: 1.35; }
+  .og-url { position: absolute; left: 72px; bottom: 150px; font-size: 22px; font-weight: 650; color: var(--red); }
+  .og .portrait { position: absolute; right: 40px; top: 40px; width: 430px; }
+  .og-chart { position: absolute; left: 0; right: 0; bottom: 0; height: 130px; }
+  .og-chart canvas { width: 100%; height: 100%; display: block; border-top: 1px solid var(--line); }
 </style>
 </head>
 <body>
 <div class="og">
-  <div>
-    <p class="role" id="role">AI engineer, Gebze, Kocaeli</p>
-    <h1 class="name">Bora Taykut <span class="name-last">Hindal</span></h1>
+  <div class="og-text">
+    <p class="role"><span class="live-dot" aria-hidden="true"></span><span id="role">AI engineer, Kocaeli</span></p>
+    <h1 class="name">Bora Taykut <span>Hindal</span></h1>
+    <p class="og-tag" id="tag">Predictive maintenance, LLM automation and end-to-end AI products.</p>
   </div>
-  <div class="og-foot"><span id="tag">Predictive maintenance, LLM pipelines, graph neural networks</span><span>taykuth.github.io</span></div>
-  <div class="og-chart"><canvas id="trace" data-y-label="vibration, mm/s" data-threshold="alert threshold" data-now="now" data-hours="h"></canvas></div>
+  <p class="og-url">taykuth.github.io</p>
+  <div class="portrait"><img src="/assets/img/portrait-560.webp" width="560" height="560" alt=""></div>
+  <div class="og-chart"><canvas id="trace" data-y-label="" data-threshold=""></canvas></div>
 </div>
 <script>
-  var q = new URLSearchParams(location.search);
-  if (q.get("lang") === "tr") {
+  if (new URLSearchParams(location.search).get("lang") === "tr") {
     document.documentElement.lang = "tr";
-    document.getElementById("role").textContent = "Yapay zeka mühendisi, Gebze, Kocaeli";
-    document.getElementById("tag").textContent = "Kestirimci bakım, LLM veri hatları, graf sinir ağları";
-    var c = document.getElementById("trace");
-    c.dataset.yLabel = "titreşim, mm/s"; c.dataset.threshold = "alarm eşiği"; c.dataset.now = "şimdi"; c.dataset.hours = "sa";
+    document.getElementById("role").textContent = "Yapay zeka mühendisi, Kocaeli";
+    document.getElementById("tag").textContent = "Kestirimci bakım, LLM otomasyonu ve uçtan uca yapay zeka ürünleri.";
   }
 </script>
 <script src="/assets/site.js"></script>
