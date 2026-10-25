@@ -1,6 +1,6 @@
 // Typewriter effect logic
 const typeWriterElement = document.querySelector('.typing-text');
-const textArray = ["Artificial Intelligence Engineer", "Machine Learning Enthusiast", "Deep Learning Architect"];
+const textArray = ["AI Engineer", "Python Backend Developer", "LLM Automation"];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;

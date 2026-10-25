@@ -501,6 +501,18 @@ ul {
 .contact-links {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.stat-card .role-meta {
+    font-size: 0.9rem;
+    color: var(--accent-primary);
+    margin: 0.25rem 0 0.75rem;
+}
+
+.hero-cta {
+    flex-wrap: wrap;
 }
 
 /* FOOTER */
