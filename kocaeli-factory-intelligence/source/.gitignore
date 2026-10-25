@@ -1,7 +1,7 @@
 .venv/
 __pycache__/
 *.pyc
-models/*.joblib
+models/
 data/*.csv
 reports/*.json
 dist/data/*.json
